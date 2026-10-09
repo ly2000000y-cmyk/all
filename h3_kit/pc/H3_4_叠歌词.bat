@@ -32,11 +32,11 @@ if not exist "node_modules\p5.brush\dist\p5.brush.js" (
   echo [错误] 依赖还没装好，请先双击 render.bat。
   goto :fail
 )
-rem 从云端下载的文件在"下载"文件夹里就自动拿过来
-if exist "%USERPROFILE%\Downloads\aicuo_h3.mp4" (
-  copy /y "%USERPROFILE%\Downloads\aicuo_h3.mp4" "out\aicuo_h3.mp4" >nul
-  echo 已从"下载"文件夹取来 aicuo_h3.mp4
-)
+rem 从云端下载的文件在"下载"文件夹里就自动拿过来（挑最新的 aicuo_h3*.mp4，兼容 "aicuo_h3 (1).mp4" 这种名字）
+set "DL="
+for /f "delims=" %%F in ('dir /b /a-d /o-d "%USERPROFILE%\Downloads\aicuo_h3*.mp4" 2^>nul') do if not defined DL set "DL=%%F"
+if defined DL copy /y "%USERPROFILE%\Downloads\%DL%" "out\aicuo_h3.mp4" >nul
+if defined DL echo 已从"下载"文件夹取来最新的 "%DL%"
 if not exist "out\aicuo_h3.mp4" (
   echo [错误] 找不到 aicuo_h3.mp4。请先在侧边栏点"下载"，或把它放进 out 文件夹。
   goto :fail
