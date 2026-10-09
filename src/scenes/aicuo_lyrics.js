@@ -26,7 +26,8 @@
   };
 
   // ---- the picture is covered (wipes, irises, flashes): the lettering fades out of these windows ----
-  const HIDE = [[6.5, 7.1], [9.85, 10.35], [11.75, 12.5], [16.3, 17.0], [19.62, 20.35], [22.9, 23.5], [29.5, 30.0], [39.35, 39.95], [45.9, 46.6], [62.2, 63.3]];
+  // (6.5→6.78, 19.62→20.12, 29.5→29.74: the last character of 吹落 / 寂寞 / 没人能说 was being faded out the instant it appeared)
+  const HIDE = [[6.78, 7.1], [9.85, 10.35], [11.75, 12.5], [16.3, 17.0], [20.12, 20.35], [22.9, 23.5], [29.74, 30.0], [39.35, 39.95], [45.9, 46.6], [62.2, 63.3]];
   const vis = t => { let a = 1; for (const [s, e] of HIDE) a = Math.min(a, 1 - ease(seg(t, s, s + .08)) * (1 - ease(seg(t, e - .08, e)))); return a; };
 
   // one painted character. o: rot, a (alpha), age (pop-in clock, s), sx/sy, col2 (darker foot), edge, cap (snow), k (boil id), shake, legs (run phase), glow
@@ -76,7 +77,7 @@
   // ================= S2: 把叶子坠落 falls like leaves (and rides the downward whip) =================
   function s2(t) {
     if (t < 5 || t > 6.9) return;
-    const X = [330, 720, 930, 1230, 1500], Y0 = [-90, -140, -110, -60, -100];
+    const X = [330, 720, 930, 1230, 1500], Y0 = [-90, -140, -110, -60, 40];   // 落 starts lower so it is on screen the moment it is sung
     each('s2', t, (c, i, a) => {
       const y = Y0[i] + a * (i < 3 ? 330 + 120 * a : 520 + 900 * a), x = X[i] + 70 * Math.sin(a * 4.2 + i * 1.7) + 40 * a;
       ch(c, x, y, 165, LEAFC[i % 5], { col2: '#8A3A1E', edge: LEAFE, rot: .6 * Math.sin(a * 4.2 + i * 1.7 + 1.2), sy: .78 + .22 * Math.abs(Math.cos(a * 5 + i)), k: 8 + i, age: a < .2 ? a : null });
@@ -85,19 +86,19 @@
 
   // ================= S3: 最脆弱的他 trembles; 选择了 jumps to the front; S4: 逃脱 runs away on tiny legs =================
   function s3(t) {
-    if (t < 7.2 || t > 10.4) return;
+    if (t < 7.2 || t > 11.2) return;   // 了 is sung at 10.40, after the heart wipe: it lands over the reading shot
     each('s3a', t, (c, i, a) => {
       const shrink = seg(t, 9.35, 9.8), x = 420 + i * 230, y = 215 + 30 * Math.sin(i * 1.3);
       ch(c, x, y, 150 * (1 - .25 * shrink), '#F0EAFF', { col2: '#B5ACDA', edge: INK, ew: .12, rot: -.05 + .04 * i, shake: 9 + 4 * (i === 3 ? 1 : 0), k: 14 + i, age: a < .2 ? a : null, a: 1 - seg(t, 9.55, 9.85) });
     });
     each('s3b', t, (c, i, a) => {
-      if (i < 2) ch(c, 560 + i * 330, 520 + i * 40, 235, '#F4EEDC', { col2: '#D8CDB6', edge: INK, rot: -.12 + .18 * i, k: 20 + i, age: a, shake: 4 });
-      else ch(c, 1330, 300, 200, '#F4EEDC', { col2: '#D8CDB6', edge: INK, rot: .1, k: 22, age: a });
+      if (i < 2) { if (t < 9.9) ch(c, 560 + i * 330, 520 + i * 40, 235, '#F4EEDC', { col2: '#D8CDB6', edge: INK, rot: -.12 + .18 * i, k: 20 + i, age: a, shake: 4 }); }
+      else ch(c, 1330, 300, 210, '#F4EEDC', { col2: '#D8CDB6', edge: INK, rot: .1, shake: 3, k: 22, age: a, a: 1 - seg(t, 10.9, 11.15) });
     });
   }
   function s4(t) {
     if (t < 11 || t > 12) return;
-    each('s4', t, (c, i, a) => { const x = 2100 - a * 2250, y = 960 - 24 * Math.abs(Math.sin(a * 20 + i)); ch(c, x, y, 150, '#F6EEDC', { col2: '#DDCFB2', edge: INK, rot: -.12, k: 26 + i, legs: a * 26 + i, a: 1 }); });
+    each('s4', t, (c, i, a) => { const x = 2100 - a * 1500, y = 870 - 24 * Math.abs(Math.sin(a * 20 + i)); ch(c, x, y, 185, '#F6EEDC', { col2: '#DDCFB2', edge: INK, rot: -.12, k: 26 + i, legs: a * 26 + i, a: 1 }); });
   }
 
   // ================= S5: 叶子 drops onto the pile; 失去消息 drifts out of the open mailbox with the moth =================
@@ -117,7 +118,7 @@
 
   // ================= S6: 风 blows through; 才感觉 rises as steam from the tea; 寂寞 rains out of the little cloud =================
   function s6(t) {
-    if (t < 17.1 || t > 19.7) return;
+    if (t < 17.1 || t > 20.3) return;
     each('s6w', t, (c, i, a) => { const f = seg(a, 0, .9); ch(c, lerp(-200, 2150, easeIn(f * .5 + f * .5)), 330 + 40 * Math.sin(a * 6), 230, WIND, { col2: WIND2, edge: WINDE, rot: .2 * Math.sin(a * 8), k: 42, age: a < .15 ? a : null, a: 1 - seg(f, .8, 1) }); });
     const cup = sc(HT, 1028, 820);
     each('s6a', t, (c, i, a) => {
@@ -126,8 +127,9 @@
     });
     const cl = sc(HT, 1110, 600);
     each('s6b', t, (c, i, a) => {
-      const f = a / .5, x = cl[0] + 190 + i * 100, y = lerp(cl[1] + 80, 960, easeIn(f)), sq = f > 1 ? 0 : 1;
-      if (f < 1.0) ch(c, x, y, 130, '#8EA3CF', { col2: '#566A9C', edge: '#232C48', rot: .12 * (i ? 1 : -1), sy: 1.12, k: 44 + i, age: a < .15 ? a : null });
+      // light letters (the grey cloud wipe covers the picture from ~19.7 s); they rain down, land, and stay until the wipe lifts
+      const f = Math.min(a / (i ? .3 : .55), 1), x = cl[0] + 190 + i * 130, y = lerp(cl[1] + 80, 900, easeIn(f));
+      ch(c, x, y, 150, '#F6F8FF', { col2: '#C9D2F0', edge: '#232C48', ew: .15, rot: .12 * (i ? 1 : -1) * (1 - .6 * f), sy: 1.12 - .12 * f, k: 44 + i, age: a < .15 ? a : null });
     });
   }
 
@@ -141,7 +143,7 @@
     });
   }
   function s9(t) {
-    if (t < 26.4 || t > 29.6) return;
+    if (t < 26.4 || t > 29.85) return;
     const head = sc(CAMN, 1090, 756);
     each('s9a', t, (c, i, a) => {
       if (i < 3) { const f = seg(a, 0, .8), x = lerp(-200, 2150, f * (.55 + .45 * f)), y = 330 + i * 38 + 40 * Math.sin(a * 6 + i); ch(c, x, y, 130, WIND, { col2: WIND2, edge: WINDE, rot: .3 * Math.sin(a * 7 + i), k: 56 + i, a: 1 }); }
@@ -161,7 +163,7 @@
     if (t < 32.5 || t > 36.5) return;
     each('s11a', t, (c, i, a) => ch(c, 330 + i * 190 + 6 * Math.sin(a * 2 + i), 230 + 30 * Math.sin(i * 2.1) + 6 * Math.sin(a * 3), 175, '#FFF8EA', { col2: '#E3CCD0', edge: '#3A2442', ew: .12, rot: -.06 + .05 * i, k: 70 + i, age: a < .2 ? a : null, a: 1 - seg(t, 35.9, 36.3) }));
     each('s11b', t, (c, i, a) => {
-      const far = i === 2 ? 1.4 : 1, f = seg(a, 0, 1.9 * far), x = 1310 + i * 125 + 70 * f, y = lerp(430, 1500, easeIn(f)), k = lerp(1, .38, easeIn(f));
+      const far = i === 2 ? 1.4 : 1, f = seg(a, 0, 1.9 * far), x = 1310 + i * 150 + 60 * f, y = lerp(430, 1500, easeIn(f)), k = lerp(1, .38, easeIn(f));
       ch(c, x, y, 165 * k, '#F2E6D0', { col2: '#C9B79A', edge: INK, rot: .5 * a * (i % 2 ? 1 : -1), k: 74 + i, age: a < .2 ? a : null, a: 1 - seg(f, .75, 1) });
     });
   }
@@ -196,14 +198,15 @@
     });
     each('s14b', t, (c, i, a) => {
       const slam = easeOut(seg(a, 0, .22)), tip = ease(seg(a, 1.0, 1.7)), fall = easeIn(seg(a, 1.7, 2.0));
-      ch(c, 560 + 40 * tip, lerp(-250, 640, slam) + 380 * fall, 450 + 40 * Math.sin(a * 22) * (1 - seg(a, 0, .5)), '#E8394C', { col2: '#A8182E', edge: '#3A0B16', rot: .02 + 1.45 * tip * (1 + .12 * fall), k: 120, age: a < .1 ? a : null, a: 1 - seg(t, 45.75, 46.0), shake: a < .3 ? 14 : 0 });
+      // stays on the left and topples AWAY from him (he tumbles through x≈650–900 at this moment)
+      ch(c, 330 - 20 * tip, lerp(-250, 640, slam) + 380 * fall, 390 + 40 * Math.sin(a * 22) * (1 - seg(a, 0, .5)), '#E8394C', { col2: '#A8182E', edge: '#3A0B16', rot: -.02 - 1.35 * tip * (1 + .12 * fall), k: 120, age: a < .1 ? a : null, a: 1 - seg(t, 45.75, 46.0), shake: a < .3 ? 14 : 0 });
     });
   }
 
   // ================= S15: 从哪里起飞 stays up in the sky as he falls away from it =================
   function s15(t) {
     if (t < 46.6 || t > 49.6) return;
-    const P = [[170, 330], [335, 400], [500, 330], [665, 400], [330, 650], [560, 700]];
+    const P = [[150, 330], [350, 410], [550, 330], [750, 410], [330, 680], [600, 730]];
     each('s15', t, (c, i, a) => {
       const up = a * (240 + 150 * (i > 3 ? 1 : 0)), x = P[i][0] + 20 * Math.sin(a * 2 + i), y = P[i][1] - up + 10 * Math.sin(a * 3 + i);
       ch(c, x, y, i > 3 ? 200 : 160, '#F0EEFF', { col2: '#A8A2DC', edge: '#17143A', ew: .13, rot: -.1 + .06 * i, k: 130 + i, age: a < .2 ? a : null, a: 1 - seg(y, 90, -30) });
@@ -213,10 +216,10 @@
   // ================= S16: 从哪里降落 comes down like snow and lands, snow caps and all =================
   function s16(t) {
     if (t < 49.5 || t > 52.8) return;
-    const X = [330, 1180, 1340, 1090, 270], GY = 790;
+    const X = [250, 520, 790, 1060, 1330], GY = 800;   // left→right in reading order, no two on the same spot
     each('s16', t, (c, i, a) => {
-      const f = seg(a, 0, 1.0), y = lerp(-110, GY, easeIn(f)), b = f >= 1 ? Math.exp(-(a - 1) * 7) * Math.abs(Math.cos((a - 1) * 18)) * 34 : 0, sqz = f >= 1 ? 1 - .22 * Math.exp(-(a - 1) * 9) : 1;
-      ch(c, X[i] + 30 * Math.sin(a * 3 + i) * (1 - f), y - b, 175, '#F3F7FF', { col2: '#B9C8E6', edge: '#1B2748', rot: (i % 2 ? .14 : -.12), sy: sqz, cap: ease(seg(a, 1, 2.2)), k: 140 + i, age: a < .2 ? a : null, a: 1 - seg(t, 52.2, 52.7) });
+      const L = i > 2 ? .6 : 1.0, f = seg(a, 0, L), y = lerp(-110, GY, easeIn(f)), b = f >= 1 ? Math.exp(-(a - L) * 7) * Math.abs(Math.cos((a - L) * 18)) * 34 : 0, sqz = f >= 1 ? 1 - .22 * Math.exp(-(a - L) * 9) : 1;
+      ch(c, X[i] + 30 * Math.sin(a * 3 + i) * (1 - f), y - b, 175, '#F3F7FF', { col2: '#B9C8E6', edge: '#1B2748', rot: (i % 2 ? .14 : -.12), sy: sqz, cap: ease(seg(a, L, L + 1.2)), k: 140 + i, age: a < .2 ? a : null, a: 1 - seg(t, 52.2, 52.7) });
     });
   }
 
