@@ -26,7 +26,7 @@ console.log('[1/3] 切 ' + PICK.length + ' 个镜头的参考片段和中间帧 
 for (const s of PICK) {
   const len = secs(s), pad = Math.max(0, MIN_REF - len);
   const vf = `scale=1280:720:flags=lanczos,fps=${FPS}` + (pad > 0 ? `,tpad=stop_mode=clone:stop_duration=${pad.toFixed(3)}` : '') + ',format=yuv420p';
-  ff(['-ss', s.t0.toFixed(3), '-t', len.toFixed(3), '-i', SRC, '-an', '-vf', vf, '-c:v', 'libx264', '-crf', '14', '-preset', 'fast', `h3/ref/${s.id}.mp4`]);
+  ff(['-ss', s.t0.toFixed(3), '-t', len.toFixed(3), '-i', SRC, '-an', '-vf', vf, '-c:v', 'libx264', '-crf', '18', '-preset', 'fast', `h3/ref/${s.id}.mp4`]);
   ff(['-ss', ((s.t0 + s.t1) / 2).toFixed(3), '-i', SRC, '-frames:v', '1', '-vf', 'scale=1280:720:flags=lanczos', `h3/stills/${s.id}_mid.png`]);
   process.stdout.write('  ' + s.id + ' ');
 }
@@ -39,20 +39,20 @@ let md = '# 《爱错》× MiniMax H3 提示词清单\n\n'
   + '用法：在 ComfyUI 的 "MiniMax H3: Reference to Video" 模板里，每个镜头——\n'
   + '- **Video 1** 传 `ref/sNN.mp4`；**Image 1** 传 `stills/sNN_mid.png`；Image 2、3… 按下表顺序传角色图。\n'
   + '- 时长填表里的"生成秒数"；出来之后用 `sNN.mp4` 命名，放进电脑的 `h3\\out\\`。\n'
-  + '- 如果模板/模型不认 "Image 1 / Video 1" 这种叫法，就把提示词里的叫法改成"the first image / the video"。\n'
+  + '- 提示词里的 <Picture N>、<Video 1> 是 H3 官方的引用写法（MiniMaxH3ReferenceToVideo 节点说明），按图片/视频接入节点的顺序编号。\n'
   + '- 建议设置（来自 ComfyUI 官方文档，未在我们的片子上验证）：先用 864×480 快速试；要看画质再用 1344×768（Megapixels 0.98、Multiple 32，别用 1.0）；步数 20，参考不贴再加到 25；先不要开 4 步/8 步加速 LoRA（官方提醒少步数会让参考几乎不起作用）；用 int8_convrot 模型时别开 Sage Attention。\n\n'
   + '## 通用画风句（每条提示词开头都有）\n\n> ' + STYLE + '\n\n';
 for (const s of PICK) {
   const len = secs(s), gen = Math.max(MIN_REF, Math.ceil(len));
   const imgs = ['`stills/' + s.id + '_mid.png`（本镜头中间帧）', ...s.cast.map(k => '`stills/cast_' + k + '.png`（' + CAST[k].zh + '）')];
-  const castLines = s.cast.map((k, i) => `Image ${i + 2} shows ${CAST[k].en}.`).join(' ');
+  const castLines = s.cast.map((k, i) => `<Picture ${i + 2}> shows ${CAST[k].en}.`).join(' ');
   const prompt = [
     STYLE,
-    'Image 1 is a still from this very film: copy its colours, line quality, paper texture and layout.',
+    '<Picture 1> is a still from this very film: copy its colours, line quality, paper texture and layout.',
     castLines,
-    'Video 1 is a rough animatic of this shot: follow its exact motion, timing, staging and camera move, and keep every character looking exactly like in the images.',
+    '<Video 1> is a rough animatic of this shot: follow its exact motion, timing, staging and camera move, and keep every character looking exactly like in the pictures.',
     'Action: ' + s.en,
-    'Do not add new characters, objects or text; keep the same set and colours as Image 1.',
+    'Do not add new characters, objects or text; keep the same set and colours as <Picture 1>.',
   ].filter(Boolean).join('\n');
   md += `## ${s.name}（${s.t0.toFixed(2)}–${s.t1.toFixed(2)} 秒，原长 ${len.toFixed(2)} 秒）\n\n`
     + `- 中文：${s.zh}\n- Video 1：\`ref/${s.id}.mp4\`\n- 图片：${imgs.map((x, i) => `Image ${i + 1} = ${x}`).join('；')}\n- 生成秒数：**${gen}**（出来后会按原长裁剪）\n- 输出文件名：\`${s.id}.mp4\`\n\n`
