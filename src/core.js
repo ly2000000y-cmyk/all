@@ -297,6 +297,7 @@ async function setup() {
   outC = document.getElementById('out'); outX = outC.getContext('2d');
   await document.fonts.load('100px "Permanent Marker"');
   try { await document.fonts.load('100px "MaShanZheng"', '北风爱错啊'); } catch (e) {}
+  try { await document.fonts.load('100px "CaveatBrush"', 'Leehom Wang'); } catch (e) {}
   window.ready = true;
   if (!location.search.includes('render')) devUI();
 }
