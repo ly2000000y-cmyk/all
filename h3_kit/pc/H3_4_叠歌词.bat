@@ -5,7 +5,7 @@ cd /d "%~dp0"
 title 爱错 x H3：叠歌词
 
 echo ============================================================
-echo   把歌词叠到 H3 混合版 out\aicuo_h3.mp4 上
+echo   把 H3 版 out\aicuo_h3.mp4 放大到 1080p、叠上歌词、换回原曲
 echo   歌词文字层比歌词文件旧时会自动重渲
 echo ============================================================
 echo.
@@ -33,7 +33,7 @@ if not exist "node_modules\p5.brush\dist\p5.brush.js" (
   goto :fail
 )
 if not exist "out\aicuo_h3.mp4" (
-  echo [错误] 找不到 out\aicuo_h3.mp4。请先双击 H3_3_拼回整片.bat。
+  echo [错误] 找不到 out\aicuo_h3.mp4。请把从云端下载的 H3 版视频改名为 aicuo_h3.mp4 放进 out 文件夹。
   goto :fail
 )
 copy /y "tools\p5.brush.patched.js" "node_modules\p5.brush\dist\p5.brush.js" >nul
@@ -57,15 +57,15 @@ if "%NEED%"=="1" (
 )
 
 echo.
-echo [2/2] 把文字叠到 H3 混合版上并重新编码 ...
-ffmpeg -y -loglevel error -stats -i "out\aicuo_h3.mp4" -framerate 24 -i "out\lyric\l%%05d.png" -filter_complex "[0:v][1:v]overlay=format=auto:shortest=1,format=yuv420p[v]" -map "[v]" -map "0:a?" -c:v libx264 -preset slow -crf 17 -c:a copy -movflags +faststart "out\aicuo_h3_lyrics.mp4"
+echo [2/2] 放大到 1080p、叠歌词、换回原曲并重新编码 ...
+ffmpeg -y -loglevel error -stats -i "out\aicuo_h3.mp4" -framerate 24 -i "out\lyric\l%%05d.png" -i "out\aicuo_mv.mp4" -filter_complex "[0:v]fps=24,scale=1920:1080:flags=lanczos,setsar=1[b];[b][1:v]overlay=format=auto:shortest=1,format=yuv420p[v]" -map "[v]" -map 2:a -c:v libx264 -preset slow -crf 17 -c:a copy -shortest -movflags +faststart "out\aicuo_h3_lyrics.mp4"
 if errorlevel 1 (
   echo [错误] 合成失败，请把上面的报错截图发给我。
   goto :fail
 )
 echo.
 echo ============================================================
-echo   完成！带歌词的 H3 混合版：%~dp0out\aicuo_h3_lyrics.mp4
+echo   完成！带歌词的 H3 黏土版：%~dp0out\aicuo_h3_lyrics.mp4
 echo ============================================================
 start "" explorer /select,"%~dp0out\aicuo_h3_lyrics.mp4"
 pause
