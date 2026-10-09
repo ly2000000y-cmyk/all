@@ -233,6 +233,7 @@ function drawLetters(c) {
   for (const L of LETTERS) {
     const k = L.pop != null ? backOut(L.pop) : 1; if (k <= .01) continue;
     c.save(); c.translate(L.x, L.y); c.rotate(L.rot || 0); c.scale(k, k); c.globalAlpha = L.alpha ?? 1;
+    if (L.fn) { L.fn(c, L); c.restore(); continue; }   // custom lettering (the lyrics): draws itself at the origin
     c.font = L.font || `${L.size}px "Permanent Marker", "Comic Sans MS", cursive`;
     c.textAlign = L.align || 'center'; c.textBaseline = 'middle';
     if (L.stroke) { c.lineJoin = 'round'; c.lineWidth = L.size * .12; c.strokeStyle = L.stroke; c.strokeText(L.txt, 0, 0); }
@@ -295,6 +296,7 @@ async function setup() {
   paperG = makePaper(); grainC = makeGrain(); glowTex = makeGlowTex(); letG = createGraphics(W, H); letG.pixelDensity(1);
   outC = document.getElementById('out'); outX = outC.getContext('2d');
   await document.fonts.load('100px "Permanent Marker"');
+  try { await document.fonts.load('100px "MaShanZheng"', '北风爱错啊'); } catch (e) {}
   window.ready = true;
   if (!location.search.includes('render')) devUI();
 }
@@ -365,6 +367,18 @@ function composite(t) {
   c.globalCompositeOperation = 'source-over';
 }
 window.renderAt = async (t, type = 'image/png', q = .92) => { await renderFrame(t); return outC.toDataURL(type, q); };
+// Lettering only, on a transparent canvas, with the paper grain multiplied in: overlay it on an already rendered video
+// (ffmpeg overlay) instead of repainting every frame. The lyrics are the only lettering, so this is fast.
+window.renderLyricAt = async (t) => {
+  window.LYRICS_ONLY = true;
+  try { T = t; await redraw(); } finally { window.LYRICS_ONLY = false; }
+  const cv = document.createElement('canvas'); cv.width = W; cv.height = H; const c = cv.getContext('2d');
+  drawLetters(c);
+  const g = document.createElement('canvas'); g.width = W; g.height = H; const gc = g.getContext('2d');
+  gc.drawImage(grainC, 0, 0); gc.globalCompositeOperation = 'destination-in'; gc.drawImage(cv, 0, 0);
+  c.globalCompositeOperation = 'multiply'; c.drawImage(g, 0, 0);
+  return cv.toDataURL('image/png');
+};
 // Contact sheet of several times, for visual checks: returns { url, ms[] }. crop = [x, y, w, h] fills each cell with just
 // that region of the frame, at full resolution (for checking faces, hands and contacts up close). at = [x, y, w, h]
 // instead crops w × h around the WORLD point (x, y), wherever each frame's camera put it (a foot, a splash, a prop on

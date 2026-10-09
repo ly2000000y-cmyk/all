@@ -11,6 +11,7 @@
 //     node render.mjs --clip [--range=0:4] --out=out/video.mp4                               straight to MP4 (one worker)
 //     node render.mjs --frames [--range=0:8] --workers=4                                     JPEG frames → out/frames (parallel, resumable)
 //     node render.mjs --encode --out=out/video.mp4                                           out/frames → MP4
+//     node render.mjs --frames --lyrics-only --dir=out/lyric                                 just the lettering as transparent PNGs (overlay it with ffmpeg)
 //   Standalone loops (LOOPS in the page): add --loop=<name> to any of the above (times are then loop times), or
 //     node render.mjs --loop=emotions --png --out=out/loop_emotions                          one cycle as PNGs (for GIFs)
 //   Music: --audio=assets/song.mp3 (or PROJECT.audio) is muxed into --clip and --encode. Other flags: --fps=24,
@@ -78,6 +79,10 @@ async function openPage(tag = '') {
   }
   return page;
 }
+const lyricOf = async (page, t) => {   // --lyrics-only: just the lettering, as a transparent PNG
+  const url = await page.evaluate(t => window.renderLyricAt(t), t);
+  return Buffer.from(url.slice(url.indexOf(',') + 1), 'base64');
+};
 const frameOf = async (page, t, type, q) => {
   const url = await page.evaluate((t, type, q) => window.renderAt(t, type, q), t, type, q);
   return Buffer.from(url.slice(url.indexOf(',') + 1), 'base64');
@@ -119,14 +124,15 @@ if (args.sheet || args.strip) {
   const [a, b] = args.range ? span(args.range) : [0, len], workers = +(args.workers || 4);
   mkdirSync(FRAMES_DIR, { recursive: true });
   const first = Math.round(a * fps), last = Math.min(Math.ceil(len * fps) - 1, Math.round(b * fps) - 1);
-  const todo = []; for (let i = first; i <= last; i++) { const f = `${FRAMES_DIR}/f${String(i).padStart(5, '0')}.jpg`; if (!existsSync(f) || statSync(f).size < 1000) todo.push(i); }
+  const lyr = !!args['lyrics-only'], pre = lyr ? 'l' : 'f', ext = lyr ? 'png' : 'jpg';
+  const todo = []; for (let i = first; i <= last; i++) { const f = `${FRAMES_DIR}/${pre}${String(i).padStart(5, '0')}.${ext}`; if (!existsSync(f) || statSync(f).size < 1000) todo.push(i); }
   console.log(`${todo.length} frames to render (${last - first + 1 - todo.length} already done), ${workers} workers`);
   let next = 0, done = 0; const start = Date.now();
   await Promise.all(Array.from({ length: workers }, async (_, w) => {
     const page = await openPage('#' + w);
     while (next < todo.length) {
-      const i = todo[next++], f = `${FRAMES_DIR}/f${String(i).padStart(5, '0')}.jpg`;
-      const buf = await frameOf(page, i / fps, 'image/jpeg', .94);
+      const i = todo[next++], f = `${FRAMES_DIR}/${pre}${String(i).padStart(5, '0')}.${ext}`;
+      const buf = lyr ? await lyricOf(page, i / fps) : await frameOf(page, i / fps, 'image/jpeg', .94);
       writeFileSync(f + '.tmp', buf); renameSync(f + '.tmp', f);
       if (++done % 24 === 0 || done === todo.length) {
         const el = (Date.now() - start) / 1000;
