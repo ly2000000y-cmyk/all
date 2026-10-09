@@ -191,7 +191,11 @@ function centred(pts, draw) {
   if (!pts.length) return;
   let x0 = Infinity, x1 = -Infinity, y0 = Infinity, y1 = -Infinity;
   for (const [x, y] of pts) { if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y; }
-  const cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
+  let cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
+  if (CAM && !CAM.rot) {   // a shape whose centre is off the canvas is dropped by p5.brush: anchor it at the nearest on-canvas point of its box
+    const z = CAM.zoom, m = 40 / z, vx0 = CAM.cx - W / 2 / z + m, vx1 = CAM.cx + W / 2 / z - m, vy0 = CAM.cy - H / 2 / z + m, vy1 = CAM.cy + H / 2 / z - m;
+    if (x0 < vx1 && x1 > vx0 && y0 < vy1 && y1 > vy0) { cx = clamp(cx, Math.max(x0, vx0), Math.min(x1, vx1)); cy = clamp(cy, Math.max(y0, vy0), Math.min(y1, vy1)); }
+  }
   push(); translate(cx, cy); draw(pts.map(([x, y]) => [x - cx, y - cy])); pop();
 }
 function paint(pts, o = {}) { centred(pts, (P) => paintAt(P, o)); }

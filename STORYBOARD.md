@@ -1,75 +1,126 @@
-# 《翠花》MV storyboard
+# 《爱错》MV 分镜：《寄错的情书》
 
-Song: 90 BPM, first downbeat 0.31 s (bar = 2.667 s). The clip's music ends at ~58.3 s; the video ends at 60.0 s
-(the platform's spoken tag at 60.8 s is left out). Times below are video seconds.
+基调：**搞笑式的悲伤**。角色把难过演得很大、很认真，而世界对此毫无同情。全片无文字，歌词只用来对时间和表演，不上屏幕。
 
-Logline: Clawd falls for 翠花, the girl from his mountain village, but six years later she comes back from the city a
-different person and drives off with someone else, so Clawd shouts her name across the mountains, lets her go, and
-plants a seed.
+## 歌曲数据（实测）
+- 时长 65.78 s；73 BPM，4/4 拍；第一个强拍 0.20 s；一小节 = 3.288 s，一拍 = 0.822 s。
+- 小节线（秒）：0.20 · 3.49 · 6.78 · 10.06 · 13.35 · 16.64 · 19.93 · 23.21 · 26.50 · 29.79 · 33.08 · 36.36 · 39.65 · 42.94 · 46.23 · 49.52 · 52.80 · 56.09 · 59.38 · 62.67
+- 结尾没有平台水印（音乐一直放到 65.78 s 才被截断），只在最后 1 秒做淡出。
+- 歌词大意（用来对时间，不上屏幕）：北风无情吹落叶（0.2–6.8）→ 最脆弱的那个选择逃跑（6.8–11.5）→ 失去消息才觉得寂寞（14–20）→ 整个冬天、风带来的痛无人可说（23–29.5）→ 我从没想过自己会这样做（32.6–38.4）→ 从没爱过，所以爱错（39.8–46）→ 从哪里起飞、从哪里降落（45.8–52）→ 多少不能原谅的错，却不能重来（52.9–59.4）→ 一声长长的"啊"收尾（60–）。
 
-World: a terraced mountain village (寨子) — green terraces, wooden stilt houses, a little shop, a watermelon patch, a
-dirt road with a bus stop. Palette: sap greens, ochre earth, clay, watermelon red/green, sky blue.
-Colour arc: bright summer noon (childhood) → gold sunset (last day together) → time-lapse → flat overcast (her return)
-→ indigo rain → deep night with moon (the search, the shout) → rose-gold dawn (letting go).
+## Logline
+呆呆（Clawd）第一次写情书，托信鸽送给对面山上亮灯窗口里的姑娘；北风把鸽子吹偏，信被送到山谷里一个满脸凶相的大块头铁山门口。呆呆在信箱旁从秋等到冬，终于绑上纸板翅膀亲自去表白，又被北风吹歪，一头栽进铁山家门口的雪堆。信寄错了，人也飞错了，撤不回来。
 
-Motif: the watermelon. Shared stolen melon as kids → the slice she pushes away → the melon he talks to alone →
-a seed planted at dawn. The half-melon and the setting sun share a shape (match cut).
+## 世界与色彩弧线
+一个山谷：左边山坡上是呆呆的信箱，山谷底是铁山阴森的石头小屋，右边远山上有一扇亮灯的窗（姑娘）。
+- 暖秋金（希望，0–13 s）→ 灰褐阴天（等待，13–23 s）→ 蓝紫冬雪（寂寞，23–33 s）→ 粉紫黄昏（飞行，33–46 s）→ 雪夜（降落与结局，46–66 s）。
+- 粉红是铁山的爱：一开始完全没有，从 S4 起一点点渗进冷色画面，到结尾占满雪夜窗口。
 
-Cast:
-- Clawd (the kit's Clawd, unchanged).
-- 翠花: Clawd-shaped, rose pink, black bangs, two braids with red ties, a red flower. Back from the city: braids gone,
-  curly bob, big cream sun hat, sunglasses, handbag.
-- 他 (the rival): indigo block, black pompadour, sunglasses; drives a low red sports car (no badge).
+## 母题
+- **北风**：冷蓝色的画出来的风线，开场把叶子吹落，飞行时又把翅膀吹翻，结尾落下最后一片叶子。
+- **信箱**：开场他满怀希望站在这里，结尾雪夜里空空的，只落一片叶子。
+- **心形封蜡**：信上的红心先在呆呆手里，再到铁山手里，最后又回到呆呆眼前。
 
-Clawd's arc: happy → love/shy → mischief → laugh → sad (she leaves) → bored/waiting → starstruck → confused → sad →
-dizzy → determined → cry → sad → determined → furious shout → sad → relieved → hopeful.
+## 角色
+- **呆呆**（Clawd，橘色）：围着红白条纹长围巾，围巾尾巴会随风甩，是"风"的指示器。后期戴纸板翅膀和飞行护目镜。
+- **咕咕**（信鸽）：灰蓝圆滚滚，颈部有青紫色光泽，背着小邮包，爱逞能、胆小、会心虚地吹口哨。
+- **铁山**（石板灰的大块头，约 1.5 倍大）：厚重的八字胡、粗眉、额头一道疤，表面是凶相，实际一读信就脸红、掉眼泪。会织一条超长的粉色围巾。
+- **她**（薄荷绿小方块，红蝴蝶结）：只在远处窗口出现，全程不知情，最后平静地拉上窗帘。
 
-Shots (no text anywhere; lyrics are acted, never written):
+## 呆呆的情绪线
+hopeful（写信）→ love（亲吻信封）→ nervous（顶风）→ hopeful（目送鸽子）→ bored/sad（空等）→ cry（喝凉茶）→ sad（下雪）→ determined（动手做翅膀）→ scared（站崖边）→ excited/starstruck（飞起来）→ dizzy → ko（栽进雪堆）→ surprised（发现信在铁山手里）→ blank/guilty（说不出口）→ 认命（被熊抱，一滴泪）。
 
-  1  0.00–6.20  [in: iris opens on Clawd]  village at noon, camera drifts right along the path. Clawd trots in,
-     stops: 翠花 at the shop door. EVENT: love at first sight.
-     reads: 0.0–0.6 iris opens · 0.6–2.4 the village + Clawd trotting · 2.4–3.6 Clawd notices someone (stops, looks)
-            · 3.6–4.6 翠花, framed in the doorway · 4.6–5.6 Clawd's love take (hearts) · 5.6–6.2 she waves shyly
-  2  6.20–9.80  [whip pan with smear]  shop counter. 翠花 turns from the counter holding a little packet and offers it.
-     EVENT: the gift. reads: 6.4–7.3 she turns with the packet · 7.3–8.1 Clawd surprised → shy · 8.1–8.9 the packet
-            passes hand to hand · 8.9–9.6 she grabs his arm and they dash off right (cut on action)
-  3  9.80–14.30 [cut on action: they dash in]  watermelon patch behind a bamboo fence. Tiptoe, she points out the biggest
-     melon and beckons; Clawd heaves it overhead; they run. reads: 9.8–11.2 tiptoe in (mischief) · 11.2–12.5 she points,
-            beckons · 12.5–13.4 the heave (strain → proud) · 13.4–14.3 the melon splits in two in his arms → match cut
-  4  14.30–16.60 [match cut: half melon → half sun]  sunset on the fence. Two halves, two spoons, seeds. Clawd spits a
-     seed, she laughs. reads: 14.3–15.0 the sun half-disc and the two of them · 15.0–15.8 seed spit · 15.8–16.6 laughter
-            → golden brush wipe
-  5  16.60–20.00 [brush wipe]  bus stop under a big tree. The bus pulls away with 翠花 waving from the window; Clawd waves.
-     Then a time-lapse: six days-and-nights flick past, the sapling becomes a tree, snow comes and goes; Clawd waits.
-     reads: 16.6–17.9 bus leaves, wave · 17.9–19.6 time-lapse (six sky cycles), Clawd bored · 19.6–20.0 the bus returns
-  6  20.00–25.70 [cut on action: the door opens]  the same stop, overcast. She steps out transformed. Clawd rushes over
-     with a watermelon slice; she lowers her shades, offers a handshake; he offers the slice; she pushes it away.
-     reads: 20.0–21.1 the reveal · 21.1–21.8 Clawd starstruck, runs · 21.8–22.8 shades down, handshake → Clawd "?" ·
-            22.8–23.9 he holds up the slice · 23.9–24.7 she pushes it away (disgusted) · 24.7–25.7 Clawd sad
-  7  25.70–29.30 [smash cut on the screech]  a red sports car shoots in and slams its brakes between them: skid, dust,
-     shake. Clawd spins dizzy; the slice flies and splats. The rival leans out, cool. reads: 25.9–26.4 car in + brake ·
-            26.4–27.4 dust + Clawd spun · 27.4–28.4 slice splat · 28.4–29.3 rival revealed, cool
-  8  29.30–33.10 [cut]  she gets in without a look back, door slams, the car roars off right; Clawd in exhaust.
-     reads: 29.3–30.4 she hops in · 30.4–31.1 rev · 31.1–32.0 car gone (smear) · 32.0–33.1 Clawd alone, rain cloud
-  9  33.10–36.40 [cut on action: car enters]  the long road to the horizon at dusk; the car shrinks into the distance,
-     Clawd runs after it; she glances back from the rear window, then looks away. reads: 33.1–34.4 the chase · 34.4–35.3
-            her glance back, sweat, turns away · 35.3–36.4 Clawd stops, rain starts → rain-blue brush wipe
- 10  36.40–39.20 [brush wipe]  rain, night, the empty road. Clawd falls to his knees, arms up, crying; camera pulls back.
-     reads: 36.4–37.4 drop to knees · 37.4–39.2 the cry, camera pulls up and back → a raindrop iris
- 11  39.20–42.90 [raindrop iris]  porch at night, lantern. Clawd sits across from a watermelon wearing 翠花's flower,
-     chatting to it; it doesn't answer; he sighs. reads: 39.2–40.2 the melon with the flower · 40.2–41.6 Clawd talks
-            (gestures, pauses) · 41.6–42.9 silence; he picks up the lantern (cut on action)
- 12  42.90–48.20 [cut on lantern]  the village at night, a lantern light bobbing up the terraces; Clawd peers left and
-     right, climbs to the summit. reads: 42.9–44.6 lantern across the dark village (wide) · 44.6–46.4 looking left,
-            right · 46.4–48.2 the summit; he plants his feet and fills his lungs (anticipation)
- 13  48.20–53.60 [tilt up with smear]  summit under the moon. THE SHOUT: lunchbox lid wide open, rings of sound across
-     the valley, birds burst from the trees; the echoes come back smaller; no answer. He sits down.
-     reads: 48.3–49.5 shout · 49.5–50.9 rings cross the valley, birds · 50.9–52.2 echoes return · 52.2–53.6 sits, sad
-            → dawn-coloured brush wipe
- 14  53.60–60.00 [brush wipe]  dawn, the village path from shot 1. A pale memory of young 翠花 walks to him and fades into
-     petals that blow away. Clawd smiles, plants a watermelon seed; a sprout pops on the last note.
-     reads: 53.6–55.6 the memory comes · 55.8–57.4 she fades into petals, they blow away · 57.4–58.3 he plants the
-            seed · 58.3–58.9 sprout pops, Clawd hopeful · 58.9–60.0 iris closes on the sprout
-  [out: iris to ink]
+## 分镜（时间 = 视频秒数；每镜的"读"按顺序排列）
 
-Rhyme: shot 14 is shot 1's path and framing at dawn instead of noon; 翠花 arrives in the same doorway light.
+**S1 0.00–3.49　山坡，暖秋**　进：纸色里圆形光圈打开到呆呆
+事件：呆呆给情书封上红心蜡，亲了一下，开心地跟着节拍蹦；北风来了，围巾横着飞，叶子刷过画面，他抱着信顶风。
+读：0.3–1.5 他的开心和那封信 · 1.7–2.8 风来了，围巾甩直，他护住信 · 2.8–3.49 鸽子落在信箱上。
+镜头：从宽景（看见左山、山谷、远山窗口的灯）推到呆呆。
+
+**S2 3.49–6.78　山坡**　进：顺着风向切
+事件：把信装进鸽子邮包，用力指向远山窗口（姑娘出现在窗里，小小地挥手）；鸽子敬礼起飞，被一阵风像叶子一样吹偏，打着转往山谷里掉；呆呆还在欢快地挥手，没发现。
+读：3.5–4.7 装信、指向她 · 4.7–5.6 鸽子起飞 · 5.6–6.78 鸽子被吹歪，呆呆毫无察觉。
+出：镜头跟着鸽子快速下摇（甩镜头拖影）。
+
+**S3 6.78–10.06　铁山家院子，阴森**　进：甩镜头落下
+事件：鸽子摔在带尖刺的围栏上，信掉在门垫上；沉重的门开了，铁山堵满门框；鸽子吓得僵住，随后炸毛逃跑，羽毛乱飞；铁山捡起带红心的信。
+读：6.8–7.7 鸽子摔到阴森的院门前（骷髅牌、尖刺围栏） · 7.7–8.6 门开，铁山出现 · 8.6–9.5 鸽子逃跑 · 9.5–10.06 铁山盯着红心封蜡。
+出：红心封蜡特写，接下一镜。
+
+**S4 10.06–13.35　铁山读信 → 呆呆等信**　进：红心形光圈
+事件：铁山拆信，凶脸一格一格软化：眉毛抬起、脸红、眼冒爱心，把信按在胸口，又偷偷闻了闻。1.7 s 后心形光圈收拢，再在呆呆脸上打开：他满怀期待地蹦着看天。
+读：10.1–11.8 铁山读信、融化 · 11.8–12.4 心形光圈转场 · 12.4–13.35 呆呆在信箱旁期待地看天。
+
+**S5 13.35–16.64　山坡，时间流逝**　进：光圈
+事件：呆呆守着信箱，天色快速地日→夜→日，叶子越堆越高；他打开信箱，里面飞出蜘蛛网和一只飞蛾；他垮下肩膀。
+读：13.4–14.6 等待与日夜流转 · 14.6–15.8 开信箱，飞蛾 · 15.8–16.64 垮掉。
+出：灰色刷子转场。
+
+**S6 16.64–19.93　山坡，灰天**　进：灰色刷子
+事件：他摆出一张小桌，倒两杯茶，等另一位；第二杯的热气慢慢消失，风把一片叶子吹到对面的椅子上；他头顶凭空长出一朵小雨云，只下在他一个人身上，他抬头，面无表情。
+读：16.7–18.0 倒两杯茶 · 18.0–19.0 对面的椅子只有叶子，茶凉了 · 19.0–19.93 雨云只淋他。
+出：雨云膨胀盖满画面（灰刷子），露出下一镜的暖光。
+
+**S7 19.93–23.21　铁山的屋子里，暖**　进：灰刷子退去，露出暖色
+事件：铁山哼着歌织粉色围巾，毛线一直拖到门外；被扣在茶杯下的鸽子偷看，吓得发抖；铁山用手指"温柔"地摸它，把它按扁；他举起织好的围巾，吸鼻子。
+读：20.0–21.2 巨大的织针和粉围巾 · 21.2–22.2 鸽子在茶杯下 · 22.2–23.21 铁山举起围巾。
+出：粉色刷子横扫（粉红首次占满画面）。
+
+**S8–S9 23.21–29.79　山坡，冬雪（一个连续镜头）**　进：粉刷子退去
+事件：下雪，雪堆上他的头和肩；他堆了个小雪人陪他一起守信箱；他对着雪人手舞足蹈地倾诉（嘴一直在动），北风"啪"地拍下雪人脑袋，脑袋顺着坡滚走，胡萝卜鼻子飞进他手里；他对着没头的雪人身体张着嘴，一片雪落在他头上。
+读：23.3–24.4 雪落、堆积 · 24.4–25.8 堆雪人 · 25.8–27.8 向雪人倾诉 · 27.8–28.7 风吹掉雪人脑袋，滚走 · 28.7–29.79 呆呆呆住。
+出：他抖掉身上的雪，雪团炸开变成白色闪屏。
+
+**S10 29.79–33.08　山坡，冬黄昏**　进：白闪
+事件：他站起来，身上的雪保持着坐姿的形状掉下；他看向远山亮着的窗，眼神变坚定；快速三拍的动手：锯纸板、锤子砸到手指、绑好翅膀并戴上护目镜。
+读：29.9–30.8 站起、看窗 · 30.8–32.2 做翅膀（三个动作各一拍） · 32.2–33.08 翅膀完成，试扇一下，围巾甩到脸上。
+出：翅膀扇动的动作接崖边。
+
+**S11 33.08–36.36　崖边**　进：动作匹配
+事件：站在山坡尽头往下看：一粒小石子掉下去，过很久才扬起一点灰；他腿抖、冒汗、闭眼深呼吸。
+读：33.1–34.2 走到崖边探头看 · 34.2–35.4 石子、发抖 · 35.4–36.36 闭眼深呼吸。
+
+**S12 36.36–39.65　起跳**　进：直切
+事件：蹲下蓄力，在拍点上跳出去；先直线下坠（胃往上提的挤压），拼命扇翅膀，一股上升气流托起了他，越飞越高，欢呼。
+读：36.4–37.1 跳与坠 · 37.1–38.4 乱扇、被托起 · 38.4–39.6 飞起来的得意。
+镜头：随他下摇再上摇。
+
+**S13 39.65–42.94　飞越山谷，粉紫黄昏**　进：甩镜头
+事件：难得的美的一刻：粉紫天空，金色的光；脚下山谷里，铁山家烟囱冒出一串心形的烟，擦着他身边飘过，他毫无察觉；前方，远山窗口的灯越来越大，姑娘的身影在窗边。
+读：39.7–41.0 飞行，心形烟飘过 · 41.0–42.94 窗口逼近，他挥手。
+
+**S14 42.94–46.23　北风再来**　进：直切（北风风线与 S1 相呼应）
+事件：冷蓝的风线横扫，一只翅膀被吹翻成伞，他开始螺旋翻滚；长音那一拍他晕眩转圈；与此同时窗里的姑娘平静地拉上窗帘。
+读：43.0–43.8 风吹翻翅膀 · 43.8–45.5 螺旋翻滚 · 45.5–46.23 窗帘合上。
+出：紫色刷子。
+
+**S15 46.23–49.52　坠落**　进：紫色刷子
+事件：他翻着跟头往下掉，身后越来越远的山坡上信箱是个小点；屋顶、烟囱迎面而来，撞到屋顶弹起，滑下积雪的屋面。
+读：46.3–47.5 下坠，信箱变小 · 47.5–49.52 撞屋顶、滑落。
+
+**S16 49.52–52.80　院子，雪夜**　进：动作匹配
+事件：他一头扎进铁山门口的雪堆，只剩两条腿在外面抽动；鸽子在围栏上用翅膀捂脸；门开了，铁山手捧花束，围着粉围巾，头发梳得整整齐齐。
+读：49.5–50.4 撞进雪堆，雪雾 · 50.4–51.5 两条腿 · 51.5–52.80 门开，铁山呆住、脸红。
+
+**S17 52.80–56.09　院子**　进：直切
+事件：铁山把他从雪里"噗"地拔出来，轻轻掸掉雪，他晕乎乎；他看见铁山手里的信（红心）；惊叹号；他转头看鸽子，鸽子望向天花吹口哨。
+读：52.9–54.0 拔出雪堆 · 54.0–55.1 发现自己的信 · 55.1–56.09 看鸽子，鸽子心虚。
+
+**S18 56.09–59.38　院子**　进：直切
+事件：呆呆比划着解释（指远山窗口、指自己、指信、摇头），铁山的表情由害羞变成受伤，眼泪汪汪；呆呆看到那张脸，冒汗，说不出口；他叹口气，点点头。铁山瞬间亮起来。
+读：56.2–57.4 比划解释 · 57.4–58.3 铁山受伤、呆呆心软 · 58.3–59.38 他认命点头，铁山放光。
+
+**S19 59.38–62.67　院子**　进：直切
+事件：熊抱，呆呆被抱离地面，眼珠鼓出；对着镜头，一滴眼泪滑下；爱心满天飞；铁山抱着他转圈。
+读：59.4–60.4 抱起 · 60.4–61.6 呆呆的面无表情和那滴泪 · 61.6–62.67 转圈。
+出：心形光圈合上。
+
+**S20 62.67–65.78　回到信箱，雪夜**　进：心形光圈在空信箱上打开
+事件：宽景（与 S1 同构图）：空空的信箱落满雪，远山窗口的灯已经熄了；谷底铁山家的窗亮着粉色的暖光，烟囱冒出小小的心；北风吹过，最后一片叶子落在信箱上。光圈收拢到那片叶子。
+读：62.8–64.2 空信箱与两扇窗的对比 · 64.2–65.78 叶子落下，光圈收拢。
+
+## 规则自查
+- 每镜都有事件：✔（见每镜"事件"）
+- 每个转场都有设计：光圈 / 甩镜头 / 动作匹配 / 刷子 / 心形光圈 / 白闪，没有硬切（S8–S9 是一个连续镜头，S11→S12 是动作匹配）
+- 屏幕上无文字：✔（骷髅牌是画的图案，不是文字）
+- 结尾呼应开场：✔（同一个信箱、同一构图、同一阵风，变成雪夜里的一片叶子）

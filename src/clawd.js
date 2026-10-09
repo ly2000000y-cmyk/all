@@ -55,7 +55,7 @@ function tintCols(o) {
 // ---------- Clawd ----------
 // Options (all optional):
 //   pose:   dx, dy (in u; negative dy = up), sq (squash; negative stretches), rot (pivots at the feet), flip, sx, sy,
-//           aL, aR (arm raise angles: 0 = straight out, + = up, - = down), walk (phase; the legs step), noLegs, noShadow
+//           aL, aR (arm raise angles: 0 = straight out, + = up, - = down), noArms, walk (phase; the legs step), noLegs, noShadow
 //   view:   front | q | side | qback | back (see VIEWS). smear 0..1 + smearDir ±1 (0 = both sides) for fast moves
 //   face:   eyes (a name, or [left, right] for mismatched eyes), mouth, lookX / lookY (-1..1), squint 0..1, blush 0..1,
 //           gloom 0..1 (dark forehead with gloom lines), lid 0..1 (lunchbox mouth, front view only), seed (blink timing)
@@ -101,7 +101,7 @@ function clawd(x, y, u, o = {}) {
   };
 
   // arms behind, then legs (under the body), then the body, then arms in front
-  V.arms.filter(a => a[3] !== 1).forEach(arm);
+  if (!o.noArms) V.arms.filter(a => a[3] !== 1).forEach(arm);
   if (!o.noLegs) V.legs.forEach(([lx, isFar], i) => {
     rs('leg' + i);
     let h = 2.2, sx = 0;
@@ -141,7 +141,7 @@ function clawd(x, y, u, o = {}) {
     }
     rs('hat'); push(); translate(V.hat * u, 0); scale(V.hw, 1); hat(u, o.hat, sw); pop();
   }
-  V.arms.filter(a => a[3] === 1).forEach(arm);
+  if (!o.noArms) V.arms.filter(a => a[3] === 1).forEach(arm);
   rs('draw'); if (o.draw) o.draw(u, sw);
   pop();
 
