@@ -32,8 +32,13 @@ if not exist "node_modules\p5.brush\dist\p5.brush.js" (
   echo [错误] 依赖还没装好，请先双击 render.bat。
   goto :fail
 )
+rem 从云端下载的文件在"下载"文件夹里就自动拿过来
+if exist "%USERPROFILE%\Downloads\aicuo_h3.mp4" (
+  copy /y "%USERPROFILE%\Downloads\aicuo_h3.mp4" "out\aicuo_h3.mp4" >nul
+  echo 已从"下载"文件夹取来 aicuo_h3.mp4
+)
 if not exist "out\aicuo_h3.mp4" (
-  echo [错误] 找不到 out\aicuo_h3.mp4。请把从云端下载的 H3 版视频改名为 aicuo_h3.mp4 放进 out 文件夹。
+  echo [错误] 找不到 aicuo_h3.mp4。请先在侧边栏点"下载"，或把它放进 out 文件夹。
   goto :fail
 )
 copy /y "tools\p5.brush.patched.js" "node_modules\p5.brush\dist\p5.brush.js" >nul
