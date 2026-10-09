@@ -6,11 +6,11 @@ const bar = n => OFF + n * 4 * BEAT;
 export const FPS = 24;
 export const MIN_REF = 4.0;   // H3 一次至少生成 4 秒；短于 4 秒的镜头，参考片段末尾定格补足，生成后再裁回原长
 
-// 角色参考图：从已渲好的 aicuo_mv.mp4 里抽的一帧（秒数），保证和成片同一个画风
+// 角色参考图：从已渲好的 aicuo_mv.mp4 里抽的一帧（t 秒），保证和成片同一个画风；crop = [x, y, 宽, 高]（占整帧的比例），把小角色裁大
 export const CAST = {
-  clawd:         { t: 1.4,  zh: '呆呆（橘色方块，红白条纹围巾）',        en: 'Clawd: a small orange rounded-rectangle block creature with two tiny dark eyes, stubby legs and a long red-and-white striped scarf' },
+  clawd:         { t: 18.1, crop: [.469, .278, .333, .444], zh: '呆呆（橘色方块，红白条纹围巾）',        en: 'Clawd: a small orange rounded-rectangle block creature with two tiny dark eyes, stubby legs and a long red-and-white striped scarf' },
   clawd_wings:   { t: 60.8, zh: '呆呆戴纸板翅膀和飞行护目镜',            en: 'Clawd again, now wearing cardboard wings and round flying goggles' },
-  pigeon:        { t: 51.0, zh: '咕咕（灰蓝信鸽，背小邮包）',            en: 'the pigeon: a round blue-grey pigeon with an iridescent purple neck and a tiny mail satchel' },
+  pigeon:        { t: 5.9,  crop: [.652, .028, .292, .389], zh: '咕咕（灰蓝信鸽，背小邮包）',            en: 'the pigeon: a round blue-grey pigeon with an iridescent purple neck and a tiny mail satchel' },
   tieshan:       { t: 11.0, zh: '铁山（石板灰大块头，八字胡、粗眉、额头疤）', en: 'Tieshan: a huge slate-grey block giant with a thick moustache, heavy angry eyebrows and a scar on his forehead' },
   tieshan_scarf: { t: 57.5, zh: '铁山围着粉色围巾',                      en: 'Tieshan again, wearing a long pink scarf' },
 };
