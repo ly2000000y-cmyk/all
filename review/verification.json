@@ -1,0 +1,283 @@
+{
+  "film": "C:\\Users\\pc\\Documents\\Codex\\2026-10-10\\johnheibel-claudeanimationbase-mv\\outputs\\翠花_MV_完整成片.mp4",
+  "size": [
+    1920,
+    1080
+  ],
+  "fps": 24.0,
+  "duration": 62.875,
+  "codec": "h264",
+  "audio_streams": [
+    {
+      "codec": "aac",
+      "rate": 44100,
+      "channels": 2
+    }
+  ],
+  "decoded_frames": 1509,
+  "decoded_audio_frames": 2711,
+  "last_frame_time": 62.833333333333336,
+  "checks": [
+    "full video/audio decode",
+    "dimensions",
+    "monotonic timestamps",
+    "unchanged source-audio alignment"
+  ],
+  "subjective_review": "not performed by this script",
+  "audio_alignment": {
+    "correlation": 0.9994159065089304,
+    "delay_samples": 0,
+    "rate": 16000,
+    "source_audio": "C:\\Users\\pc\\Documents\\Codex\\2026-10-10\\johnheibel-claudeanimationbase-mv\\work\\cuihua.mp3",
+    "audio_start": 0,
+    "compared_samples": 1006000
+  },
+  "samples": [
+    {
+      "time": 0.25,
+      "label": "开场显影",
+      "actual_time": 0.25,
+      "file": "actual_000000250000.jpg"
+    },
+    {
+      "time": 1.4,
+      "label": "寨子姑娘的故事",
+      "actual_time": 1.4166666666666667,
+      "file": "actual_000001400000.jpg"
+    },
+    {
+      "time": 3.8,
+      "label": "动身",
+      "actual_time": 3.8333333333333335,
+      "file": "actual_000003800000.jpg"
+    },
+    {
+      "time": 4.15,
+      "label": "骑摩托进寨",
+      "actual_time": 4.166666666666667,
+      "file": "actual_000004150000.jpg"
+    },
+    {
+      "time": 5.4,
+      "label": "寨口相遇",
+      "actual_time": 5.416666666666667,
+      "file": "actual_000005400000.jpg"
+    },
+    {
+      "time": 6.65,
+      "label": "小卖部",
+      "actual_time": 6.666666666666667,
+      "file": "actual_000006650000.jpg"
+    },
+    {
+      "time": 7.4,
+      "label": "递出红色烟包",
+      "actual_time": 7.416666666666667,
+      "file": "actual_000007400000.jpg"
+    },
+    {
+      "time": 9.5,
+      "label": "接过烟包",
+      "actual_time": 9.5,
+      "file": "actual_000009500000.jpg"
+    },
+    {
+      "time": 10.2,
+      "label": "替他卷裤脚",
+      "actual_time": 10.208333333333334,
+      "file": "actual_000010200000.jpg"
+    },
+    {
+      "time": 11.65,
+      "label": "一同出发",
+      "actual_time": 11.666666666666666,
+      "file": "actual_000011650000.jpg"
+    },
+    {
+      "time": 12.1,
+      "label": "偷瓜镜头衔接",
+      "actual_time": 12.125,
+      "file": "actual_000012100000.jpg"
+    },
+    {
+      "time": 12.8,
+      "label": "伸手摘瓜",
+      "actual_time": 12.833333333333334,
+      "file": "actual_000012800000.jpg"
+    },
+    {
+      "time": 14.85,
+      "label": "逃跑",
+      "actual_time": 14.875,
+      "file": "actual_000014850000.jpg"
+    },
+    {
+      "time": 15.55,
+      "label": "大爹抓现行",
+      "actual_time": 15.583333333333334,
+      "file": "actual_000015550000.jpg"
+    },
+    {
+      "time": 17.55,
+      "label": "季节转场",
+      "actual_time": 17.583333333333332,
+      "file": "actual_000017550000.jpg"
+    },
+    {
+      "time": 17.95,
+      "label": "六年后",
+      "actual_time": 17.958333333333332,
+      "file": "actual_000017950000.jpg"
+    },
+    {
+      "time": 19.9,
+      "label": "旧桥显影",
+      "actual_time": 19.916666666666668,
+      "file": "actual_000019900000.jpg"
+    },
+    {
+      "time": 20.25,
+      "label": "重逢",
+      "actual_time": 20.25,
+      "file": "actual_000020250000.jpg"
+    },
+    {
+      "time": 23.1,
+      "label": "她不再帮他卷裤脚",
+      "actual_time": 23.125,
+      "file": "actual_000023100000.jpg"
+    },
+    {
+      "time": 25.35,
+      "label": "关系转冷",
+      "actual_time": 25.375,
+      "file": "actual_000025350000.jpg"
+    },
+    {
+      "time": 25.65,
+      "label": "她离开",
+      "actual_time": 25.666666666666668,
+      "file": "actual_000025650000.jpg"
+    },
+    {
+      "time": 28.5,
+      "label": "他试着卷自己的裤脚",
+      "actual_time": 28.5,
+      "file": "actual_000028500000.jpg"
+    },
+    {
+      "time": 31.8,
+      "label": "花落入水",
+      "actual_time": 31.833333333333332,
+      "file": "actual_000031800000.jpg"
+    },
+    {
+      "time": 32.4,
+      "label": "呼唤翠花",
+      "actual_time": 32.416666666666664,
+      "file": "actual_000032400000.jpg"
+    },
+    {
+      "time": 34.6,
+      "label": "她不敢回答",
+      "actual_time": 34.625,
+      "file": "actual_000034600000.jpg"
+    },
+    {
+      "time": 36.25,
+      "label": "跪下",
+      "actual_time": 36.25,
+      "file": "actual_000036250000.jpg"
+    },
+    {
+      "time": 37.5,
+      "label": "问为什么",
+      "actual_time": 37.5,
+      "file": "actual_000037500000.jpg"
+    },
+    {
+      "time": 38.8,
+      "label": "一个人的对话",
+      "actual_time": 38.833333333333336,
+      "file": "actual_000038800000.jpg"
+    },
+    {
+      "time": 41.9,
+      "label": "空桥回应",
+      "actual_time": 41.916666666666664,
+      "file": "actual_000041900000.jpg"
+    },
+    {
+      "time": 42.8,
+      "label": "寻找",
+      "actual_time": 42.833333333333336,
+      "file": "actual_000042800000.jpg"
+    },
+    {
+      "time": 45.5,
+      "label": "经过旧小卖部",
+      "actual_time": 45.5,
+      "file": "actual_000045500000.jpg"
+    },
+    {
+      "time": 47.8,
+      "label": "无人应答",
+      "actual_time": 47.833333333333336,
+      "file": "actual_000047800000.jpg"
+    },
+    {
+      "time": 48.2,
+      "label": "回忆卡片",
+      "actual_time": 48.208333333333336,
+      "file": "actual_000048200000.jpg"
+    },
+    {
+      "time": 52,
+      "label": "偷瓜旧时光",
+      "actual_time": 52.0,
+      "file": "actual_000052000000.jpg"
+    },
+    {
+      "time": 55,
+      "label": "重逢回忆",
+      "actual_time": 55.0,
+      "file": "actual_000055000000.jpg"
+    },
+    {
+      "time": 57.9,
+      "label": "记忆散去",
+      "actual_time": 57.916666666666664,
+      "file": "actual_000057900000.jpg"
+    },
+    {
+      "time": 58.2,
+      "label": "花落水面",
+      "actual_time": 58.208333333333336,
+      "file": "actual_000058200000.jpg"
+    },
+    {
+      "time": 60.2,
+      "label": "水波",
+      "actual_time": 60.208333333333336,
+      "file": "actual_000060200000.jpg"
+    },
+    {
+      "time": 62.35,
+      "label": "纸面淡出",
+      "actual_time": 62.375,
+      "file": "actual_000062350000.jpg"
+    },
+    {
+      "time": 62.83,
+      "label": "最后一帧",
+      "actual_time": 62.833333333333336,
+      "file": "actual_000062830000.jpg"
+    }
+  ],
+  "boards": [
+    "actual_contact_01.jpg",
+    "actual_contact_02.jpg",
+    "actual_contact_03.jpg",
+    "actual_contact_04.jpg"
+  ]
+}

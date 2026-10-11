@@ -1,0 +1,24 @@
+{
+  "size": [1920, 1080],
+  "fps": 24,
+  "duration": 62.875,
+  "source_audio": "cuihua.mp3",
+  "audio_start": 0,
+  "scenes": [
+    {"start": 0, "end": 3.95, "title": "听见寨子姑娘多"},
+    {"start": 3.95, "end": 6.55, "title": "摩托来到寨子脚"},
+    {"start": 6.55, "end": 9.95, "title": "小卖部买红河"},
+    {"start": 9.95, "end": 12, "title": "卷裤脚后出发"},
+    {"start": 12, "end": 15.35, "title": "偷西瓜"},
+    {"start": 15.35, "end": 17.75, "title": "被大爹发现"},
+    {"start": 17.75, "end": 20.1, "title": "六年过去"},
+    {"start": 20.1, "end": 25.5, "title": "重逢与拒绝卷裤脚"},
+    {"start": 25.5, "end": 32.25, "title": "分别与独自卷裤脚"},
+    {"start": 32.25, "end": 36.2, "title": "呼唤翠花"},
+    {"start": 36.2, "end": 38.5, "title": "跪下问为什么"},
+    {"start": 38.5, "end": 42.65, "title": "一个人的对话"},
+    {"start": 42.65, "end": 48.1, "title": "寻找"},
+    {"start": 48.1, "end": 58.1, "title": "旧日回忆"},
+    {"start": 58.1, "end": 62.875, "title": "花落水面"}
+  ]
+}

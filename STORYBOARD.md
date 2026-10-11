@@ -1,75 +1,53 @@
-# 《翠花》MV storyboard
+# 《翠花》MV 分镜 · 全片交付版
 
-Song: 90 BPM, first downbeat 0.31 s (bar = 2.667 s). The clip's music ends at ~58.3 s; the video ends at 60.0 s
-(the platform's spoken tag at 60.8 s is left out). Times below are video seconds.
+## 核心故事
 
-Logline: Clawd falls for 翠花, the girl from his mountain village, but six years later she comes back from the city a
-different person and drives off with someone else, so Clawd shouts her name across the mountains, lets her go, and
-plants a seed.
+一个骑摩托进寨子的男孩，和翠花一起买东西、涉水、偷瓜、逃跑。六年后，她回到同一座小桥，两人却再也无法靠近。以前由她卷起的裤脚，现在只能由他自己卷。
 
-World: a terraced mountain village (寨子) — green terraces, wooden stilt houses, a little shop, a watermelon patch, a
-dirt road with a bus stop. Palette: sap greens, ochre earth, clay, watermelon red/green, sky blue.
-Colour arc: bright summer noon (childhood) → gold sunset (last day together) → time-lapse → flat overcast (her return)
-→ indigo rain → deep night with moon (the search, the shout) → rose-gold dawn (letting go).
+这是依据用户提供的歌词做的原创视觉改编，不宣称是歌曲作者的真实经历。歌词及其时间点由用户提供；音轨已完整解码，未人工听辨或逐字核验。候选速度约 90 BPM，动作主要按歌词节点与实际音轨起音安排。
 
-Motif: the watermelon. Shared stolen melon as kids → the slice she pushes away → the melon he talks to alone →
-a seed planted at dawn. The half-melon and the setting sun share a shape (match cut).
+## 角色与画面
 
-Cast:
-- Clawd (the kit's Clawd, unchanged).
-- 翠花: Clawd-shaped, rose pink, black bangs, two braids with red ties, a red flower. Back from the city: braids gone,
-  curly bob, big cream sun hat, sunglasses, handbag.
-- 他 (the rival): indigo block, black pompadour, sunglasses; drives a low red sports car (no badge).
+- 男孩：赤陶橙色方块角色，靛蓝腰部色带。年轻时神情松快，重逢后动作迟疑。
+- 翠花：鼠尾草绿方块角色，米白花朵发饰；成年后保留发饰，增加浅灰绿色衣饰与小行李箱。
+- 大爹：赭黄色方块角色，草帽、胡须；通过抬手指向被偷的瓜、随后吃惊来表演。
+- 场景：寨子脚、朴素小卖部、瓜田、溪边木桥；保留同一棵树与同一条溪水。
+- 色彩：年轻时奶油黄、陶土橙、叶绿；岁月转场后渐入灰蓝、低饱和绿，留下角色的暖色。
+- 动画：纸纹、颜料、墨线每秒十二次轻微变化；24fps 输出。身体有挤压伸展、脚步交替、表情预备动作，手持物与手一起运动。
+- 画面默认无字幕或道具文字。红纸包用形状和动作表现，不画品牌字样。
 
-Clawd's arc: happy → love/shy → mischief → laugh → sad (she leaves) → bored/waiting → starstruck → confused → sad →
-dizzy → determined → cry → sad → determined → furious shout → sad → relieved → hopeful.
+## 全片分镜
 
-Shots (no text anywhere; lyrics are acted, never written):
+| 时间 | 音乐 / 歌词依据 | 构图与事件 | 连续动作与情绪 | 转场 |
+|---|---|---|---|---|
+| 0.00–3.95 | “我听见你说 / 你们的寨子姑娘多” | 树荫下中景，男孩听朋友比划寨子的位置，抬眼看向山路 | 先侧耳，再眼睛亮起，最后决定出发；背景叶片摇动 | 纸面笔刷显影；视线引出山路 |
+| 3.95–6.55 | “我骑着摩托来到寨子脚” | 平面侧景，摩托从左到右驶近寨子，翠花从路边望来 | 两轮转动，身子随路面轻弹；男孩刹车前身体先后仰，停下后头盔迟半拍晃动 | 摩托轮子与小卖部红纸包圆形贴纸作形状呼应 |
+| 6.55–9.95 | “你去小卖部给我买了一包红河” | 小卖部门口双人中近景，翠花递过一只红纸包 | 递、接、眼神相遇依次发生；他接住后短暂停顿，她露出羞涩笑容 | 接东西的手向下，引到下一场的裤脚 |
+| 9.95–12.00 | “我们现在就出发” | 溪边木桥双人中景；翠花靠近男孩，低头替他整理裤脚 | 两人短暂靠近，随后一同转向瓜田；卷边用裤脚浅色折痕表现 | 起身动作延续 |
+| 12.00–15.35 | 12.70–14.00 “跟我去偷西瓜” | 暖色瓜田双人中景；男孩盯住一只瓜，翠花在旁放风 | 先看左右，蹲低，托起瓜，瓜的重量压低手臂；两人交换一个得意眼神 | 抱瓜起跑的动作切入下一镜 |
+| 15.35–17.75 | 15.40–17.20 “我们被大爹发现了” | 同一瓜田，大爹从左边树后出现，手指指向男孩怀里的瓜 | 大爹指瓜后，两人先缩身吃惊，再交替迈腿逃向右侧；瓜始终贴着手 | 逃跑的绿色瓜形被叶片覆盖，引出岁月 |
+| 17.75–20.10 | 17.80–19.30 “一转眼过了六年” | 同一棵树与溪边桥，树干变粗，叶色变化；人物暂时退出画面 | 叶片沿前一镜方向掠过，春绿转秋黄再入灰蓝；树下曾有的两处脚印只剩一处 | 叶片笔刷擦到成年重逢 |
+| 20.10–25.50 | 20.20–22.30 “你回来跟我讲普通话”；22.70–25.10 “我不会再帮你卷裤脚” | 灰蓝色溪桥双人中景；翠花站在行李箱旁，他向前迈半步 | 她先抬手说话，他想笑却迟疑；他抬起以前被卷过裤脚的脚，她低头看见，手没有伸过去。他把脚放下，两人视线错开 | 镜头缓慢推到两人之间的空隙 |
+| 25.50–32.25 | 歌词空档 / 音乐延续 | 溪边中景；翠花走开，男孩独自留在桥上 | 他试着卷起自己的裤脚；一片花瓣落入水里，带出空旷感 | 水面带入呼唤段落 |
+| 32.25–36.20 | “哦翠花 / 面对我不敢回答” | 男孩在桥左、翠花在桥右的双人宽景 | 他张口、抬手；她背对或低头，不作回应；反应之间留停顿 | 笔刷擦拭进入下一镜 |
+| 36.20–38.50 | “我跪下 / 问你为啥” | 桥边中景，男孩下沉到低姿态 | 身体先屈再落，手向外摊开；翠花仍在远处 | 身体下降带出空旷桥面 |
+| 38.50–42.65 | “我受不了一个人的对话” | 宽景只留下桥上的男孩 | 他短暂伸手又停下；水波和空桥代替对话的另一方 | 笔刷擦拭转入寻找段落 |
+| 42.65–48.10 | “哦翠花 / 我的姑娘 / 翠花 / 在哪儿” | 男孩沿桥寻找，经过已经关门的小卖部 | 他左右张望，女孩不再出现；呼唤以表情和手势表现，不做逐字嘴型 | 沿水面转入回忆 |
+| 48.10–58.10 | 音乐延续 | 三张手绘回忆卡片依次漂过：偷瓜、旧桥、小卖部；男孩留在画面前景 | 往日暖色短暂显现，再褪回灰蓝与纸色 | 回忆笔触淡下，留水面 |
+| 58.10–62.875 | 音乐收尾 | 水面近景，一片花瓣漂过树影，退回纸面 | 波纹渐小，画面淡成奶油纸，并留白收住 | 颜料边缘退成纸面 |
 
-  1  0.00–6.20  [in: iris opens on Clawd]  village at noon, camera drifts right along the path. Clawd trots in,
-     stops: 翠花 at the shop door. EVENT: love at first sight.
-     reads: 0.0–0.6 iris opens · 0.6–2.4 the village + Clawd trotting · 2.4–3.6 Clawd notices someone (stops, looks)
-            · 3.6–4.6 翠花, framed in the doorway · 4.6–5.6 Clawd's love take (hearts) · 5.6–6.2 she waves shyly
-  2  6.20–9.80  [whip pan with smear]  shop counter. 翠花 turns from the counter holding a little packet and offers it.
-     EVENT: the gift. reads: 6.4–7.3 she turns with the packet · 7.3–8.1 Clawd surprised → shy · 8.1–8.9 the packet
-            passes hand to hand · 8.9–9.6 she grabs his arm and they dash off right (cut on action)
-  3  9.80–14.30 [cut on action: they dash in]  watermelon patch behind a bamboo fence. Tiptoe, she points out the biggest
-     melon and beckons; Clawd heaves it overhead; they run. reads: 9.8–11.2 tiptoe in (mischief) · 11.2–12.5 she points,
-            beckons · 12.5–13.4 the heave (strain → proud) · 13.4–14.3 the melon splits in two in his arms → match cut
-  4  14.30–16.60 [match cut: half melon → half sun]  sunset on the fence. Two halves, two spoons, seeds. Clawd spits a
-     seed, she laughs. reads: 14.3–15.0 the sun half-disc and the two of them · 15.0–15.8 seed spit · 15.8–16.6 laughter
-            → golden brush wipe
-  5  16.60–20.00 [brush wipe]  bus stop under a big tree. The bus pulls away with 翠花 waving from the window; Clawd waves.
-     Then a time-lapse: six days-and-nights flick past, the sapling becomes a tree, snow comes and goes; Clawd waits.
-     reads: 16.6–17.9 bus leaves, wave · 17.9–19.6 time-lapse (six sky cycles), Clawd bored · 19.6–20.0 the bus returns
-  6  20.00–25.70 [cut on action: the door opens]  the same stop, overcast. She steps out transformed. Clawd rushes over
-     with a watermelon slice; she lowers her shades, offers a handshake; he offers the slice; she pushes it away.
-     reads: 20.0–21.1 the reveal · 21.1–21.8 Clawd starstruck, runs · 21.8–22.8 shades down, handshake → Clawd "?" ·
-            22.8–23.9 he holds up the slice · 23.9–24.7 she pushes it away (disgusted) · 24.7–25.7 Clawd sad
-  7  25.70–29.30 [smash cut on the screech]  a red sports car shoots in and slams its brakes between them: skid, dust,
-     shake. Clawd spins dizzy; the slice flies and splats. The rival leans out, cool. reads: 25.9–26.4 car in + brake ·
-            26.4–27.4 dust + Clawd spun · 27.4–28.4 slice splat · 28.4–29.3 rival revealed, cool
-  8  29.30–33.10 [cut]  she gets in without a look back, door slams, the car roars off right; Clawd in exhaust.
-     reads: 29.3–30.4 she hops in · 30.4–31.1 rev · 31.1–32.0 car gone (smear) · 32.0–33.1 Clawd alone, rain cloud
-  9  33.10–36.40 [cut on action: car enters]  the long road to the horizon at dusk; the car shrinks into the distance,
-     Clawd runs after it; she glances back from the rear window, then looks away. reads: 33.1–34.4 the chase · 34.4–35.3
-            her glance back, sweat, turns away · 35.3–36.4 Clawd stops, rain starts → rain-blue brush wipe
- 10  36.40–39.20 [brush wipe]  rain, night, the empty road. Clawd falls to his knees, arms up, crying; camera pulls back.
-     reads: 36.4–37.4 drop to knees · 37.4–39.2 the cry, camera pulls up and back → a raindrop iris
- 11  39.20–42.90 [raindrop iris]  porch at night, lantern. Clawd sits across from a watermelon wearing 翠花's flower,
-     chatting to it; it doesn't answer; he sighs. reads: 39.2–40.2 the melon with the flower · 40.2–41.6 Clawd talks
-            (gestures, pauses) · 41.6–42.9 silence; he picks up the lantern (cut on action)
- 12  42.90–48.20 [cut on lantern]  the village at night, a lantern light bobbing up the terraces; Clawd peers left and
-     right, climbs to the summit. reads: 42.9–44.6 lantern across the dark village (wide) · 44.6–46.4 looking left,
-            right · 46.4–48.2 the summit; he plants his feet and fills his lungs (anticipation)
- 13  48.20–53.60 [tilt up with smear]  summit under the moon. THE SHOUT: lunchbox lid wide open, rings of sound across
-     the valley, birds burst from the trees; the echoes come back smaller; no answer. He sits down.
-     reads: 48.3–49.5 shout · 49.5–50.9 rings cross the valley, birds · 50.9–52.2 echoes return · 52.2–53.6 sits, sad
-            → dawn-coloured brush wipe
- 14  53.60–60.00 [brush wipe]  dawn, the village path from shot 1. A pale memory of young 翠花 walks to him and fades into
-     petals that blow away. Clawd smiles, plants a watermelon seed; a sprout pops on the last note.
-     reads: 53.6–55.6 the memory comes · 55.8–57.4 she fades into petals, they blow away · 57.4–58.3 he plants the
-            seed · 58.3–58.9 sprout pops, Clawd hopeful · 58.9–60.0 iris closes on the sprout
-  [out: iris to ink]
+## 阶段样片
 
-Rhyme: shot 14 is shot 1's path and framing at dawn instead of noon; 翠花 arrives in the same doorway light.
+- 使用原歌段 **12.00–25.50 秒**，样片时长 **13.50 秒**，16:9、1920×1080、24fps。
+- 覆盖：偷瓜、被发现后起跑、六年变化、成年重逢及拒绝卷裤脚。
+- 一次只突出一个主要信息：瓜 → 大爹 → 逃跑 → 岁月 → 两人关系变远。
+- 起跑要看到交替腿部动作；抱着的瓜跟随手臂。表情通过预备、变化和回落完成。
+- 重逢时人物不需要口型逐字对应；重点核对“伸过去又收回”的动作与 22.70 秒的歌词关系。
+- 此样片为 12.00–25.50 秒阶段预览；完整成片现已另行交付。
+
+## 完整成片与检查
+
+- 文件：`翠花_MV_完整成片.mp4`，视频 1920×1080、24fps、H.264，音频 AAC 双声道 44.1kHz。容器时长 62.929 秒；视频画面 62.875 秒，完整原曲保留至 62.929 秒，末帧为纸面留白。
+- 对完整成片执行视频与音频解码、尺寸、帧时间单调性、帧数、歌词节点抽帧与音轨对齐检查；解出 1,509 帧及 2,711 个音频帧。
+- 音频对齐使用原曲 0 秒起点，相关系数 0.99942，测得延迟 0 个采样；抽查 40 个关键时点，并查看完整分镜接触表。
+- 歌词和时间点由用户提供；音轨已完整解码并与成片比对，模型没有人工听辨歌曲或逐字核验歌词。

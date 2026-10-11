@@ -111,7 +111,13 @@ function clawd(x, y, u, o = {}) {
         sx = Math.sin(ph) * .55; h = 2.2 - Math.max(0, Math.cos(ph)) * .8;
       } else { const ph = Math.sin((o.walk + (i % 2 ? .5 : 0)) * TAU); if (ph > 0) h = 2.2 - ph * .9; }
     }
-    paint(rectPts((lx + sx) * u, -2.4 * u, u, h * u, J * .6), { wash: isFar ? far : dk, washOp: 255, ink: PAL.ink, sw: sw * .8 });
+    if (i === 2 && V === VIEWS.front && (o.stepOffer || 0) > 0) {
+      // Sample adaptation: replace this leg, keeping its root joined to the body.
+      const k = clamp(o.stepOffer), off = 1.6 * k, up = .85 * k;
+      paint([[(lx + sx) * u, -2.4 * u], [(lx + sx + 1) * u, -2.4 * u],
+        [(lx + sx + 1 + off) * u, (-2.4 + h - up) * u], [(lx + sx + off) * u, (-2.4 + h - up) * u]],
+        { wash: isFar ? far : dk, washOp: 255, ink: PAL.ink, sw: sw * .8 });
+    } else paint(rectPts((lx + sx) * u, -2.4 * u, u, h * u, J * .6), { wash: isFar ? far : dk, washOp: 255, ink: PAL.ink, sw: sw * .8 });
   });
 
   rs('body');

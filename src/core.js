@@ -102,23 +102,11 @@ function flash(k, col = '#FFFDF6') { if (k > .01) paint(rectPts(-60, -60, W + 12
 // p5.brush mixes every colour like pigment, so yellow painted over blue turns green and light can't be painted; this
 // is the one non-paint mark in the kit. It lands on what's painted so far, under anything painted after it, follows
 // the camera, and boils a little. Keep a = 1 on dark grounds; on light grounds it barely shows (as light would).
-// CPU-render build (no GPU): glows are queued in screen space and added in the 2D compositor, between the background
-// plates and the painted layer, so they light the background and sit under characters and props.
-let GLOWS = [];
 function glow(x, y, r, col = '#FFC766', a = 1) {
   if (a <= 0 || r < 1) return;
-  // (x, y) is a world point under the camera (or a screen point with no camera); don't call it inside translate()
-  const rr = r * (1 + jit(.03)), [sx, sy] = toScreen(x, y);
-  GLOWS.push({ x: sx, y: sy, r: rr * (CAM ? CAM.zoom : 1), col, a: clamp(a) });
-}
-function drawGlows(c) {
-  c.save(); c.globalCompositeOperation = 'lighter';
-  for (const g of GLOWS) {
-    const col = color(g.col), gr = c.createRadialGradient(g.x, g.y, 0, g.x, g.y, g.r);
-    [[0, 1], [.18, .8], [.45, .32], [.75, .08], [1, 0]].forEach(([s, al]) => gr.addColorStop(s, `rgba(${red(col)},${green(col)},${blue(col)},${al * .59 * g.a})`));
-    c.fillStyle = gr; c.fillRect(g.x - g.r, g.y - g.r, 2 * g.r, 2 * g.r);
-  }
-  c.restore();
+  flushBrush();
+  const c = color(col), rr = r * (1 + jit(.03));
+  push(); blendMode(ADD); tint(red(c), green(c), blue(c), 150 * clamp(a)); image(glowTex, x - rr, y - rr, 2 * rr, 2 * rr); noTint(); blendMode(BLEND); pop();
 }
 function makeGlowTex() {
   const g = createGraphics(256, 256); g.pixelDensity(1); const c = g.drawingContext, gr = c.createRadialGradient(128, 128, 0, 128, 128, 128);
@@ -248,7 +236,6 @@ function flushBrush() {
 // Paint the queued lettering into the scene itself, so later layers (wipes) cover it. drawWorld calls this after each
 // frame; call it yourself before a wipe or iris if the shot has lettering, or the letters will sit on top of it.
 function flushLetters() {
-  return;   // CPU-render build: lettering is drawn by the 2D compositor, over the painted layer (see composite)
   if (!LETTERS.length) return;
   letG.clear(); drawLetters(letG.drawingContext); LETTERS = [];
   flushBrush();
@@ -294,73 +281,24 @@ async function setup() {
   window.ready = true;
   if (!location.search.includes('render')) devUI();
 }
-// ---------- CPU-render build: plates ----------
-// On a machine without a GPU, every p5.brush composite and every WebGL image() costs hundreds of ms. So this build
-// paints the WebGL layer on a TRANSPARENT canvas and puts the frame together in a 2D compositor:
-//   paper → background plates → glows → the painted layer (characters, props, effects) → lettering → grain.
-// A plate is a static background painting (like a painted background in cel animation): it's painted once with the same
-// brushes and cached, then laid under every frame through the shot's camera. It boils on a slow 3-drawing loop.
-//   usePlate(key, painter, cam = { cx, cy, zoom }, o = { par: 1 })   call it from a shot, before or after camBegin.
-//   painter() paints the plate in world coordinates (the plate's own camera is applied around it).
-//   par < 1 makes a far layer that follows the camera less (parallax).
-const PLATES = new Map(), PLATE_BOIL = 6;   // boil loop: 3 drawings, 6 a second
-let PLATE_REQ = [], PLATE_PAINT = null;
-function usePlate(key, painter, cam = { cx: W / 2, cy: H / 2, zoom: 1 }, o = {}) {
-  const idx = Math.floor(T * PLATE_BOIL) % 3, k = key + '#' + idx;
-  PLATE_REQ.push({ k, key, idx, painter, cam, par: o.par ?? 1, alpha: o.alpha ?? 1 });
-}
-function drawPlates(c) {
-  const cam = LAST_CAM || { cx: W / 2, cy: H / 2, zoom: 1, rot: 0 };
-  for (const p of PLATE_REQ) {
-    const img = PLATES.get(p.k); if (!img) continue;
-    const pc = p.cam, f = p.par, z = pc.zoom * Math.pow(cam.zoom / pc.zoom, f), cx = pc.cx + (cam.cx - pc.cx) * f, cy = pc.cy + (cam.cy - pc.cy) * f;
-    const k = z / pc.zoom;
-    c.save(); c.globalAlpha = p.alpha;
-    c.translate(W / 2, H / 2); c.rotate(cam.rot || 0); c.translate(-W / 2, -H / 2);
-    c.drawImage(img, W / 2 + (pc.cx - cx) * z - W / 2 * k, H / 2 + (pc.cy - cy) * z - H / 2 * k, W * k, H * k);
-    c.restore();
-  }
-}
 function draw() {
   if (!window.ready) return;
-  LETTERS = []; GLOWS = []; CAM = LAST_CAM = null; PLATE_REQ = [];
-  clear();
+  LETTERS = []; CAM = LAST_CAM = null;
   push(); translate(-W / 2, -H / 2);
-  if (PLATE_PAINT) {   // painting a plate: just the painter, under the plate's camera, on its own boil drawing
-    const p = PLATE_PAINT; BOILN = 100000 + p.idx; CLAWD_N = 0; boilSeed('plate ' + p.key); noiseSeed(77);
-    camBegin(p.cam.cx, p.cam.cy, p.cam.zoom); p.painter(); camEnd();
-  } else {
-    BOILN = Math.floor(T * BOIL); CLAWD_N = 0; boilSeed('frame'); noiseSeed(77);
-    drawWorld(T);
-  }
+  BOILN = Math.floor(T * BOIL); CLAWD_N = 0; boilSeed('frame'); noiseSeed(77);
+  image(paperG, 0, 0);
+  drawWorld(T);
   pop();
-}
-async function renderFrame(t) {
-  T = t; await redraw();
-  const missing = PLATE_REQ.filter(p => !PLATES.has(p.k));
-  if (missing.length) {
-    const keep = PLATE_REQ;
-    for (const p of missing) {
-      PLATE_PAINT = p; await redraw(); PLATE_PAINT = null;
-      const cv = document.createElement('canvas'); cv.width = W; cv.height = H; cv.getContext('2d').drawImage(drawingContext.canvas, 0, 0, W, H);
-      PLATES.set(p.k, cv);
-    }
-    T = t; await redraw();
-  }
-  composite(t);
 }
 function composite(t) {
   const c = outX;
   c.globalCompositeOperation = 'source-over'; c.globalAlpha = 1;
-  c.drawImage(paperG.elt || paperG.canvas, 0, 0, W, H);
-  drawPlates(c);
-  drawGlows(c);
   c.drawImage(drawingContext.canvas, 0, 0, W, H);
   drawLetters(c);
   c.globalCompositeOperation = 'multiply'; c.drawImage(grainC, 0, 0);
   c.globalCompositeOperation = 'source-over';
 }
-window.renderAt = async (t, type = 'image/png', q = .92) => { await renderFrame(t); return outC.toDataURL(type, q); };
+window.renderAt = async (t, type = 'image/png', q = .92) => { T = t; await redraw(); composite(t); return outC.toDataURL(type, q); };
 // Contact sheet of several times, for visual checks: returns { url, ms[] }. crop = [x, y, w, h] fills each cell with just
 // that region of the frame, at full resolution (for checking faces, hands and contacts up close). at = [x, y, w, h]
 // instead crops w × h around the WORLD point (x, y), wherever each frame's camera put it (a foot, a splash, a prop on
@@ -370,7 +308,7 @@ window.renderSheet = async (times, cols = 3, w = 640, crop = null, at = null) =>
   const [, , cw, ch] = at || crop || [0, 0, W, H], h = Math.round(w * ch / cw), rows = Math.ceil(times.length / cols), sc = document.createElement('canvas');
   sc.width = cols * w; sc.height = rows * h; const c = sc.getContext('2d'), ms = [];
   for (let i = 0; i < times.length; i++) {
-    const t0 = performance.now(); await renderFrame(times[i]); ms.push(Math.round(performance.now() - t0));
+    const t0 = performance.now(); T = times[i]; await redraw(); composite(times[i]); ms.push(Math.round(performance.now() - t0));
     const x = (i % cols) * w, y = Math.floor(i / cols) * h;
     const [cx, cy] = at ? toScreen(at[0], at[1], LAST_CAM).map((v, j) => v - (j ? ch : cw) / 2) : crop || [0, 0];
     c.drawImage(outC, cx, cy, cw, ch, x, y, w, h); c.fillStyle = 'rgba(0,0,0,.65)'; c.fillRect(x, y, 84, 24); c.fillStyle = '#fff'; c.font = '15px sans-serif'; c.fillText(times[i].toFixed(2) + 's', x + 6, y + 17);
