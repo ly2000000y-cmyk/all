@@ -1,75 +1,68 @@
-# 《翠花》MV storyboard
+# 《22》 MV storyboard
 
-Song: 90 BPM, first downbeat 0.31 s (bar = 2.667 s). The clip's music ends at ~58.3 s; the video ends at 60.0 s
-(the platform's spoken tag at 60.8 s is left out). Times below are video seconds.
+Song: 62.6 s, 92.9 BPM, first downbeat 0.34 s. One bar = 2.583 s. Every lyric line is exactly 2 bars (5.167 s), so every
+shot below is one line and every cut sits on a bar line (b_k = 0.34 + 5.167k). Lyrics are acted, never written.
 
-Logline: Clawd falls for 翠花, the girl from his mountain village, but six years later she comes back from the city a
-different person and drives off with someone else, so Clawd shouts her name across the mountains, lets her go, and
-plants a seed.
+**Logline.** She turns 22 in the spring. She walks out into the world to find it is loud, tiring and sometimes stuck,
+but she still carries one petal and a dream, and ends the film back under the same blossoms, re-tying her own ribbon.
 
-World: a terraced mountain village (寨子) — green terraces, wooden stilt houses, a little shop, a watermelon patch, a
-dirt road with a bus stop. Palette: sap greens, ochre earth, clay, watermelon red/green, sky blue.
-Colour arc: bright summer noon (childhood) → gold sunset (last day together) → time-lapse → flat overcast (her return)
-→ indigo rain → deep night with moon (the search, the shout) → rose-gold dawn (letting go).
+**World / colour arc.** soft spring pastels (pink blossom, mint, sky) → cold grey-blue city (she is the only warm yellow)
+→ golden dusk balcony → fluorescent office → night blue → dream teal/indigo with gold lanterns → noon blossom → dawn road
+→ storm slate → washed spring light. She is always the warmest, brightest thing on screen.
 
-Motif: the watermelon. Shared stolen melon as kids → the slice she pushes away → the melon he talks to alone →
-a seed planted at dawn. The half-melon and the setting sun share a shape (match cut).
+**Cast.** 她 (sunshine-yellow Clawd block, ponytail with a teal ribbon, fringe). Commuters/colleagues (muted grey-blue blocks, hats, ties).
+**Motifs.** the pink petal (caught in shot 1, planted, sails, lands on the cake, comes back) and the teal ribbon (blows
+off in shot 2, hangs on the first blossom branch, she finds it in shot 12).
 
-Cast:
-- Clawd (the kit's Clawd, unchanged).
-- 翠花: Clawd-shaped, rose pink, black bangs, two braids with red ties, a red flower. Back from the city: braids gone,
-  curly bob, big cream sun hat, sunglasses, handbag.
-- 他 (the rival): indigo block, black pompadour, sunglasses; drives a low red sports car (no badge).
+**Her arc.** serene/curious → carefree → in her own bubble → hopeful → hurried → drained → restless → dreaming → alone but
+wishing → bold leaving → daunted → determined → at peace.
 
-Clawd's arc: happy → love/shy → mischief → laugh → sad (she leaves) → bored/waiting → starstruck → confused → sad →
-dizzy → determined → cry → sad → determined → furious shout → sad → relieved → hopeful.
-
-Shots (no text anywhere; lyrics are acted, never written):
-
-  1  0.00–6.20  [in: iris opens on Clawd]  village at noon, camera drifts right along the path. Clawd trots in,
-     stops: 翠花 at the shop door. EVENT: love at first sight.
-     reads: 0.0–0.6 iris opens · 0.6–2.4 the village + Clawd trotting · 2.4–3.6 Clawd notices someone (stops, looks)
-            · 3.6–4.6 翠花, framed in the doorway · 4.6–5.6 Clawd's love take (hearts) · 5.6–6.2 she waves shyly
-  2  6.20–9.80  [whip pan with smear]  shop counter. 翠花 turns from the counter holding a little packet and offers it.
-     EVENT: the gift. reads: 6.4–7.3 she turns with the packet · 7.3–8.1 Clawd surprised → shy · 8.1–8.9 the packet
-            passes hand to hand · 8.9–9.6 she grabs his arm and they dash off right (cut on action)
-  3  9.80–14.30 [cut on action: they dash in]  watermelon patch behind a bamboo fence. Tiptoe, she points out the biggest
-     melon and beckons; Clawd heaves it overhead; they run. reads: 9.8–11.2 tiptoe in (mischief) · 11.2–12.5 she points,
-            beckons · 12.5–13.4 the heave (strain → proud) · 13.4–14.3 the melon splits in two in his arms → match cut
-  4  14.30–16.60 [match cut: half melon → half sun]  sunset on the fence. Two halves, two spoons, seeds. Clawd spits a
-     seed, she laughs. reads: 14.3–15.0 the sun half-disc and the two of them · 15.0–15.8 seed spit · 15.8–16.6 laughter
-            → golden brush wipe
-  5  16.60–20.00 [brush wipe]  bus stop under a big tree. The bus pulls away with 翠花 waving from the window; Clawd waves.
-     Then a time-lapse: six days-and-nights flick past, the sapling becomes a tree, snow comes and goes; Clawd waits.
-     reads: 16.6–17.9 bus leaves, wave · 17.9–19.6 time-lapse (six sky cycles), Clawd bored · 19.6–20.0 the bus returns
-  6  20.00–25.70 [cut on action: the door opens]  the same stop, overcast. She steps out transformed. Clawd rushes over
-     with a watermelon slice; she lowers her shades, offers a handshake; he offers the slice; she pushes it away.
-     reads: 20.0–21.1 the reveal · 21.1–21.8 Clawd starstruck, runs · 21.8–22.8 shades down, handshake → Clawd "?" ·
-            22.8–23.9 he holds up the slice · 23.9–24.7 she pushes it away (disgusted) · 24.7–25.7 Clawd sad
-  7  25.70–29.30 [smash cut on the screech]  a red sports car shoots in and slams its brakes between them: skid, dust,
-     shake. Clawd spins dizzy; the slice flies and splats. The rival leans out, cool. reads: 25.9–26.4 car in + brake ·
-            26.4–27.4 dust + Clawd spun · 27.4–28.4 slice splat · 28.4–29.3 rival revealed, cool
-  8  29.30–33.10 [cut]  she gets in without a look back, door slams, the car roars off right; Clawd in exhaust.
-     reads: 29.3–30.4 she hops in · 30.4–31.1 rev · 31.1–32.0 car gone (smear) · 32.0–33.1 Clawd alone, rain cloud
-  9  33.10–36.40 [cut on action: car enters]  the long road to the horizon at dusk; the car shrinks into the distance,
-     Clawd runs after it; she glances back from the rear window, then looks away. reads: 33.1–34.4 the chase · 34.4–35.3
-            her glance back, sweat, turns away · 35.3–36.4 Clawd stops, rain starts → rain-blue brush wipe
- 10  36.40–39.20 [brush wipe]  rain, night, the empty road. Clawd falls to his knees, arms up, crying; camera pulls back.
-     reads: 36.4–37.4 drop to knees · 37.4–39.2 the cry, camera pulls up and back → a raindrop iris
- 11  39.20–42.90 [raindrop iris]  porch at night, lantern. Clawd sits across from a watermelon wearing 翠花's flower,
-     chatting to it; it doesn't answer; he sighs. reads: 39.2–40.2 the melon with the flower · 40.2–41.6 Clawd talks
-            (gestures, pauses) · 41.6–42.9 silence; he picks up the lantern (cut on action)
- 12  42.90–48.20 [cut on lantern]  the village at night, a lantern light bobbing up the terraces; Clawd peers left and
-     right, climbs to the summit. reads: 42.9–44.6 lantern across the dark village (wide) · 44.6–46.4 looking left,
-            right · 46.4–48.2 the summit; he plants his feet and fills his lungs (anticipation)
- 13  48.20–53.60 [tilt up with smear]  summit under the moon. THE SHOUT: lunchbox lid wide open, rings of sound across
-     the valley, birds burst from the trees; the echoes come back smaller; no answer. He sits down.
-     reads: 48.3–49.5 shout · 49.5–50.9 rings cross the valley, birds · 50.9–52.2 echoes return · 52.2–53.6 sits, sad
-            → dawn-coloured brush wipe
- 14  53.60–60.00 [brush wipe]  dawn, the village path from shot 1. A pale memory of young 翠花 walks to him and fades into
-     petals that blow away. Clawd smiles, plants a watermelon seed; a sprout pops on the last note.
-     reads: 53.6–55.6 the memory comes · 55.8–57.4 she fades into petals, they blow away · 57.4–58.3 he plants the
-            seed · 58.3–58.9 sprout pops, Clawd hopeful · 58.9–60.0 iris closes on the sprout
-  [out: iris to ink]
-
-Rhyme: shot 14 is shot 1's path and framing at dawn instead of noon; 翠花 arrives in the same doorway light.
+## Shots (video seconds)
+1  0.00–5.51  春天是她最爱的季节 · blossom lane [in: iris opens on her face]
+   She breathes in the blossoms; a gust shakes the branch (petal shower); she spins and catches one petal.
+   reads: 0–.8 face in iris · .8–2.2 breathe, chest on the beat · 2.2–3.4 petal shower (EVENT) · 3.4–4.7 spin, catch · 4.7–5.5 looks at petal, sets off right
+   [out: whip right with speed lines + petals]
+2  5.51–10.67 当微风随意吹乱她的头发 · windy ridge walk [treadmill, side view]
+   Breeze → gust → the ribbon pops off and flies away; she reaches, then laughs and lets it go, hair loose.
+   reads: 5.5–6.6 calm stroll · 6.6–7.6 gust leans her · 7.6–8.6 ribbon pops, flies · 8.6–9.6 laughs, arms out · 9.6–10.7 ribbon drifts off
+   [out: teal brush wipe]
+3  10.67–15.84 她并不在意身边世界的嘈杂 · rush-hour street
+   Grey commuters rush the other way, horns and scribble noise; she bops in headphones, noise bounces off her glow; a petal drifts to her hand.
+   reads: 10.7–11.6 busy street · 11.6–13.2 she walks, bops · 13.2–14.4 horn blast, she sways on · 14.4–15.8 looks up, petal lands
+   [out: iris on her face]
+4  15.84–21.01 只想着自己生命中的变化 · golden balcony
+   She drops the petal into an empty pot; time-lapse: sprout, leaves, bud, blossom; her face follows.
+   reads: 15.8–16.8 drops petal · 16.8–18.6 sprout grows, sun moves · 18.6–19.8 bud · 19.8–21.0 blossom opens, glow
+   [out: iris closes on the blossom → clock opens (round match)]
+5  21.01–26.18 还有15分钟在午休 · office lunch break
+   A red wedge on the wall clock = 15 minutes; she bolts her lunch, nods off, the alarm shakes the clock, she jolts up.
+   reads: 21–22 iris opens from the clock face · 22–23.3 bento, wedge shrinks · 23.3–24.8 chewing, then nodding · 24.8–25.6 alarm · 25.6–26.2 take, rush
+   [out: grey brush wipe]
+6  26.18–31.34 从早到晚没有想象中那么好过 · the day in one desk
+   Time-lapse: sun crosses the window, papers pile on the beat, she sinks from busy to buried; night, lamp.
+   reads: 26.2–27.2 busy · 27.2–29 papers pile, dusk · 29–30.4 night, buried · 30.4–31.3 sad eyes peek, lamp goes out
+   [out: lights out]
+7  31.34–36.51 安定的日子不一定就是幸福 · cosy room, calendar pages
+   Lamp on; the same routine four times (calendar pages fall, sigh); a petal taps the window, she goes to it.
+   reads: 31.3–32 lamp on · 32–33.5 pages fall, sighs · 33.5–34.6 petal at the glass · 34.6–36.5 window opens, breeze
+   [out: dream bubble grows from her head]
+8  36.51–41.68 忘不掉她在心里做过的梦 · dream sky-sea
+   She sails a petal-boat over cloud waves, lanterns rise, paper cranes fly with her; she hugs one lantern.
+   reads: 36.5–37.5 bubble opens on the dream · 37.5–39 sailing · 39–40.3 cranes, arms wide · 40.3–41.7 hugs lantern, glow
+   [out: cream flash + petals]
+9  41.68–46.84 她今年农历3月6号刚满22 · noon bench
+   Alone on a bench with a cupcake and two candles; she looks at the empty seat, wishes, blows, petals fall on the cake.
+   reads: 41.7–42.8 unwraps cake · 42.8–43.8 candles lit · 43.8–44.8 looks at empty seat, wishes · 44.8–46.8 blow, petals, smile
+   [out: petals sweep right]
+10 46.84–52.01 刚甩开课本要离开家看看这世界 · leaving home at dawn
+   She bursts out of the door, hurls the textbooks (they flap away as birds), glances back, runs down the road.
+   reads: 46.8–47.7 door bursts · 47.7–49.2 toss, books fly · 49.2–50.2 glance back · 50.2–52 runs right, road opens wide
+   [out: storm brush wipe]
+11 52.01–57.18 却发现许多烦恼要面对 · crossroads under a scribble storm
+   Four troubles pop up on the forks, a scribble cloud rains on her; she gulps, grips her straps and steps forward.
+   reads: 52–53 arrives at the forks · 53–54.6 troubles pop on the beat · 54.6–55.8 cloud, rain, sweat · 55.8–57.2 determined step
+   [out: rain wipe clearing to spring]
+12 57.18–62.60 (outro) · the same blossom lane after rain
+   Same pose and framing as shot 1; the ribbon hangs on the branch; she ties it back on and a petal falls once more.
+   reads: 57.2–58.4 eyes closed, drips · 58.4–59.5 sees the ribbon · 59.5–60.8 jump, ties it · 60.8–62 petal, smile · 62–62.6 iris closes
+   [out: iris closes on her]
